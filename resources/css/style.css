@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.firstSection{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('/images/firstsection.jpg');
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.firstSectionnothome{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('/images/firstsection.jpg');
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.para{
+    font-family: 'Roboto', sans-serif;
+}
+.cl{
+    color: #666;
+}
+.scl{
+    color: #25323E;
+}
+.list {
+    line-height: 40px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#chat3 .form-control {
+    border-color: transparent;
+}
+    
+#chat3 .form-control:focus {
+    border-color: transparent;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+}
+.active{
+    background-color: #03254b;
+}
+.notactive{
+    background-color: #03254bc9;
+}
+

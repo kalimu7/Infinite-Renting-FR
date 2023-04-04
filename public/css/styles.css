@@ -1,0 +1,417 @@
+:root {
+    --main-bg-color: #25323E;
+    --main-text-color: white;
+    --second-text-color: #bbbec5;
+    --second-bg-color: #03254bc9;
+  }
+  .primary-text {
+    color: var(--main-text-color);
+  }
+  
+  .second-text {
+    color: var(--second-text-color);
+  }
+  
+  .primary-bg {
+    background-color: var(--main-bg-color);
+  }
+  
+  .secondary-bg {
+    background-color: var(--second-bg-color);
+  }
+  
+  .rounded-full {
+    border-radius: 100%;
+  }
+  
+  #wrapper {
+    overflow-x: hidden;
+    background-image: linear-gradient(
+      to right,
+      #f8f9fa,
+      
+      #f8f9fa
+    );
+  }
+  
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+    transition: margin 0.25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  #menu-toggle {
+    cursor: pointer;
+  }
+  
+  .list-group-item {
+    border: none;
+    padding: 20px 30px;
+  }
+  
+  .list-group-item.active {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: none;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }
+
+  /* ***prf*** */
+
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+.card .card-header {
+    font-weight: 500;
+}
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+.form-control, .dataTable-input {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #69707a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c5ccd6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.nav-borders .nav-link.active {
+    color: #0061f2;
+    border-bottom-color: #0061f2;
+}
+.nav-borders .nav-link {
+    color: #69707a;
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap");
+
+*,
+p,
+a {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Jost", sans-serif;
+}
+
+
+.single-add-property > h3 {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  color: #03254bc9;
+  text-transform: capitalize;
+}
+
+.property-form-group label {
+  color: #333;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.property-form-group p input {
+  border: 1px solid #ddd;
+  height: 50px;
+  padding: 10px;
+  width: 95%;
+}
+
+.property-form-group p.no-mb,
+.property-form-group p.no-mb input {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 991px) {
+  .property-form-group p.no-mb,
+  .property-form-group p.no-mb input {
+    margin-bottom: 20px;
+  }
+
+  .property-form-group p.no-mb.first input {
+    margin-bottom: 20px !important;
+  }
+
+  .property-form-group p.no-mb.last:last-child,
+  .property-form-group p.no-mb input:last-child {
+    margin-bottom: 0px;
+  }
+}
+.property-form-group p textarea {
+  border: 1px solid #ddd;
+  height: 180px;
+  padding: 10px;
+  width: 100%;
+}
+
+.single-add-property {
+  background: #fff none repeat scroll 0 0;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+
+.property-form-group p,
+.property-form-group .dropdown.faq-drop {
+  margin-bottom: 20px;
+}
+
+.property-form-group .dropdown.faq-drop.no-mb {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 991px) {
+  .property-form-group .dropdown.faq-drop.no-mb {
+    margin-bottom: 40px;
+  }
+
+  .property-form-group .dropdown.faq-drop.no-mb.last {
+    margin-bottom: 0px;
+  }
+}
+.property-form-group .dropdown-toggle {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  color: #999;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.property-form-group .dropdown-toggle::after {
+  display: none;
+}
+
+.property-form-group .dropdown-menu.faq-drop-open {
+  width: 100%;
+  padding: 0;
+}
+
+.property-form-group .dropdown-menu.faq-drop-open > li {
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.property-form-group .dropdown-menu.faq-drop-open > li:last-child {
+  border-bottom: 0px solid #ddd;
+}
+
+.property-form-group .dropdown-menu.faq-drop-open > li:hover {
+  background: #f9f9f9;
+}
+
+.property-form-group .dropdown-toggle i {
+  float: right;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.property-form-group .dz-message {
+  background: #fff none repeat scroll 0 0;
+  border: 2px dashed #1abc9c;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.dz-default i {
+  color: #1abc9c;
+  display: block;
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+.dz-default.dz-message > span {
+  color: #1abc9c;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.dropdown.faq-drop span {
+  color: #999;
+  margin-left: 5px;
+}
+
+.pro-feature-add label {
+  color: #666;
+  font-weight: 400;
+}
+
+.pro-feature-add input,
+.custom-form .filter-tags input {
+  position: relative;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding: 0;
+  color: #fa2964;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  outline: none;
+  margin-right: 0.5rem;
+  margin-bottom: 0px;
+  background: #fff !important;
+  
+}
+
+.pro-feature-add > li {
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+.pro-feature-add li.no-mb input,
+.pro-feature-add .no-mb label,
+ul.pro-feature-add,
+.pro-feature-add > li.no-mb {
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 404px) {
+  .pro-feature-add .no-mb label {
+    margin-bottom: 20px;
+  }
+
+  .pro-feature-add .no-mb.last label:last-child {
+    margin-bottom: 0px;
+  }
+}
+.prperty-submit-button > button {
+  background: #03254bc9 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100%;
+  padding: 10px 20px;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  text-transform: capitalize;
+}
+
+.prperty-submit-button > button:hover {
+  background: #121b22 none repeat scroll 0 0;
+}
+
+.royal-complete-order-head > p {
+  font-size: 17px;
+}
+
+@media screen and (max-width: 575px) {
+  .property-form-group {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.dropzone {
+  text-align: center;
+  border: 2px dashed #03254bc9;
+}
+
+.fa-cloud-arrow-up {
+  font-size: 75px;
+  display: block;
+  color: #03254bc9;
+  padding-bottom: 45px;
+}
+
+.aploadInsideConatiner {
+  padding: 60px;
+}
+.scl{
+  background-color: #03254bc9;
+}
+.AP, .PE, .MP{
+  display: none;
+}
