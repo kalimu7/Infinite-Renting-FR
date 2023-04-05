@@ -14,10 +14,8 @@ use App\Http\Controllers\PropertyController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/home',[PagesController::class,'home']);
+Route::get('/', [PagesController::class,'home']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

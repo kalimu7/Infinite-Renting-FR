@@ -1,24 +1,13 @@
 @extends('app')
 @section('content')
+@php
+print_r($Pr);  
+
+@endphp
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <body style="background-color: #f5f7fb;">
     <!-- style="background-color: #f5f7fb;" -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
-          <div>
-              <img src="./images/icons8-cabin-64.png" alt="" srcset="" width="70px" >
-              <a class="navbar-brand" href="#">Infinite Renting</a>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav align-items-center">
-              <a class="nav-item nav-link " href="#">Sign Up <span>/</span></a>
-              <a class="nav-item nav-link" href="#">Sign In</a>
-              <a class="nav-item nav-link adP text-center text-white p-2" style="background-color:#694134;" href="#">Add Property</a>
-            </div>
-          </div>
-      </nav>
+      
       <div class="bigresult row mt-5 mx-2 my-4">
           <div class="col-lg-3 col-md-10 px-3 bg-white rounded mx-2 " style="height: max-content; ">
             <div class="border-bottom  p-2 mb-4">

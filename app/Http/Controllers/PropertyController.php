@@ -20,7 +20,7 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        //
+        return view('properties.create');
     }
 
     /**
@@ -28,7 +28,28 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // ***first send the essential data***
+        // $request->input('title');
+        // $request->input('pro-desc');
+        // $request->input('price');
+        // $request->input('country');
+        // $request->input('area');
+        // $request->input('address');
+        // $request->input('city');
+        // $request->input('state');
+        // $request->input('type');
+        // $request->input('rooms');
+        // $request->input('bathrooms');
+        // ***here i try handling the images*****
+        
+        $images = $request->file('images');
+        $path = public_path('images');
+        foreach ($images as $image) {
+            $name = $image->getClientOriginalName();
+            $image->move($path, $name);
+            echo $name;
+            
+        }
     }
 
     /**
