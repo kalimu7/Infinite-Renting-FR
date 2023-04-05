@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-3">
         <div>
           <img src="./images/icons8-cabin-64.png" alt="" srcset="" width="70px" >
-            <a class="navbar-brand" href="#">Infinite Renting</a>
+            <a class="navbar-brand" href="/home">Infinite Renting</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,9 +22,9 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav align-items-center gap-3">
             <div class="d-flex align-items-center">
-              <a class="nav-item nav-link " href="#">Sign Up</a>
+              <a class="nav-item nav-link " href="/register">Sign Up</a>
               <span>/</span>
-              <a class="nav-item nav-link" href="#">Sign In</a>
+              <a class="nav-item nav-link" href="/login">Sign In</a>
             </div>
             <a class="nav-item nav-link adP text-center text-white py-2 px-4 rounded active" href="#">Add Property</a>
           </div>

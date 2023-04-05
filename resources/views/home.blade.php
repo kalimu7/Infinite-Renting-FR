@@ -9,7 +9,7 @@
         <p class="display-5 text-white">Helping  renters find their perfect fit.</p>
         <div class="d-flex">
           <input type="text" class="form-control" placeholder="Search place" aria-label="Username" aria-describedby="basic-addon1"> 
-          <button style="background-color:#694134;" class="btn text-white mx-2">Search</button>
+          <button style="background-color: #25323E;" class="btn text-white mx-2 px-3 ">Search</button>
         </div>
     </div>
     <div class="secondsection p-5">
@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="text-center">
-      <button style="background-color:#694134;" class="btn text-white mx-1 " >View More</button>
+      <button style="background-color: #25323E;" class="btn text-white mx-1 " >View More</button>
       <h3 class="my-3">The Most Rental Listings</h3>
       <p class="my-2">Choose from over 1 million apartments, houses, condos, and townhomes for rent</p>
     </div>

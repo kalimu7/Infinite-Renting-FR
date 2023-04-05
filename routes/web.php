@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PropertyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,5 +26,6 @@ Route::middleware([
     Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
     Route::get('/profile',[PagesController::class,'profile']);
 });
+Route::resource('/properties',PropertyController::class);
 Route::get('/dash',[PagesController::class,'dash'])->middleware('checkstatus');
 
