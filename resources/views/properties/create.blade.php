@@ -6,7 +6,15 @@
         <div class="row">
 
             <div class="col-lg-9 col-md-12 col-xs-12 royal-add-property-area section_100 pl-0 user-dash2">
-
+                @if($errors->any())
+                <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+                </div>
+            []@endif
                 <div class="single-add-property">
                     <h3>Property description and price</h3>
                     <div class="property-form-group">
@@ -101,18 +109,15 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-12">
-                                <p class="no-mb first">
-                                    <label for="latitude">Google Maps latitude</label>
-                                    <input type="text" name="latitude" placeholder="Google Maps latitude" id="latitude">
-                                </p>
-                            </div>
-                            <div class="col-lg-6 col-md-12">
-                                <p class="no-mb last">
-                                    <label for="longitude">Google Maps longitude</label>
-                                    <input type="text" name="longitude" placeholder="Google Maps longitude"
-                                        id="longitude">
-                                </p>
+                            <div class="dropzone">
+                                <div class="aploadInsideConatiner" id="uplvideo">
+
+
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                                    <span id="span-alertvideo">Click Here to upload a video of your property</span>
+                                </div>
+                                <input type="file" name="video" multiple id="filevideo" style="display:none">
                             </div>
                         </div>
                     </div>
@@ -126,9 +131,9 @@
 
                                 <label for="area">type</label>
                                 <select name="type" id="type">
-                                    <option value="volvo">House</option>
-                                    <option value="saab">Apartement</option>
-                                    <option value="mercedes">Garage</option>
+                                    <option value="1">House</option>
+                                    <option value="2">Apartement</option>
+                                    <option value="3">Garage</option>
                                 </select>
 
                             </div>
@@ -137,9 +142,9 @@
 
                                 <label for="area">Rooms</label>
                                 <select name="rooms" id="type">
-                                    <option value="volvo">1</option>
-                                    <option value="saab">2</option>
-                                    <option value="mercedes">3</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
                                 </select>
 
                             </div>
@@ -149,10 +154,10 @@
                             <div class="col-lg-4 col-md-12">
 
                                 <label for="bathrooms">BathRooms</label>
-                                <select name="type" id="type">
-                                    <option value="volvo">1</option>
-                                    <option value="saab">2</option>
-                                    <option value="mercedes">3</option>
+                                <select name="bathrooms" id="type">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
                                 </select>
 
                             </div>
@@ -163,9 +168,9 @@
 
                             <label for="Garages">Garages</label>
                             <select name="garages" id="type">
-                                <option value="volvo">1</option>
-                                <option value="saab">2</option>
-                                <option value="mercedes">3</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
                             </select>
 
                         </div>
@@ -176,9 +181,9 @@
 
                             <label for="area">BedRooms</label>
                             <select name="bedrooms" id="type">
-                                <option value="volvo">1</option>
-                                <option value="saab">2</option>
-                                <option value="mercedes">3</option>
+                                <option value="2">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
                             </select>
 
                         </div>
@@ -195,7 +200,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-a" type="checkbox" name="Air" >
+                                            <input id="check-a" type="checkbox" name="Air" value="aircondition" >
                                             <label for="check-a">Air Conditioning</label>
                                         </div>
                                     </div>
@@ -203,7 +208,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-b" type="checkbox" name="Swi">
+                                            <input id="check-b" type="checkbox" name="check[]" value="swimming" >
                                             <label for="check-b">Swimming Pool</label>
                                         </div>
                                     </div>
@@ -211,7 +216,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-c" type="checkbox" name="Central">
+                                            <input id="check-c" type="checkbox" name="Check[]" value="heating">
                                             <label for="check-c">Central Heating</label>
                                         </div>
                                     </div>
@@ -219,7 +224,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-d" type="checkbox" name="check">
+                                            <input id="check-d" type="checkbox" name="check[]" value="laundry">
                                             <label for="check-d">Laundry Room</label>
                                         </div>
                                     </div>
@@ -227,7 +232,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-e" type="checkbox" name="check">
+                                            <input id="check-e" type="checkbox" name="check[]" value="gym">
                                             <label for="check-e">Gym</label>
                                         </div>
                                     </div>
@@ -235,7 +240,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-g" type="checkbox" name="check">
+                                            <input id="check-g" type="checkbox" name="check[]" value="alrm">
                                             <label for="check-g">Alarm</label>
                                         </div>
                                     </div>
@@ -243,7 +248,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-h" type="checkbox" name="check">
+                                            <input id="check-h" type="checkbox" name="check[]" value="windowcovering">
                                             <label for="check-h">Window Covering</label>
                                         </div>
                                     </div>
@@ -251,7 +256,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-i" type="checkbox" name="check">
+                                            <input id="check-i" type="checkbox" name="check[]" value="refrigetor">
                                             <label for="check-i">Refrigerator</label>
                                         </div>
                                     </div>
@@ -259,7 +264,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-j" type="checkbox" name="check">
+                                            <input id="check-j" type="checkbox" name="check[]" value="tvcablewifi">
                                             <label for="check-j">TV Cable & WIFI</label>
                                         </div>
                                     </div>
@@ -267,7 +272,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-k" type="checkbox" name="check">
+                                            <input id="check-k" type="checkbox" name="check[]" value="microwave">
                                             <label for="check-k">Microwave</label>
                                         </div>
                                     </div>
@@ -331,13 +336,33 @@
     const  fileInput = document.querySelector('#fileInput');
     const  bigInput = document.querySelector('#upl');
     const  span = document.querySelector('#span-alert');
+    const  bigInputvideo = document.querySelector('#uplvideo');
+    const  fileInputvideo = document.querySelector('#filevideo');
+    const  spanvideo = document.querySelector('#span-alertvideo');
     bigInput.addEventListener('click', () => {
         fileInput.click();
     });
     fileInput.addEventListener('change', () => {
         // Handle the selected file(s) here
+        const ar =  fileInput.files;
+        const arr=[];
+        for(let i = 0;i<ar.length;i++){
+            arr[i] = ar[i].name;
+        }
         const name = fileInput.files[0].name;
-        span.textContent = name;
+        console.log(arr);
+        // console.log(fileInput.files);
+        span.textContent = arr;
     });
+    bigInputvideo.addEventListener('click', () => {
+        fileInputvideo.click();
+    });
+    fileInputvideo.addEventListener('change',()=>{
+        
+        const namevideo = fileInputvideo.files[0].name;
+        spanvideo.textContent = namevideo;
+    })
+
+    
 </script>
     @endsection

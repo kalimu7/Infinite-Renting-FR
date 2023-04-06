@@ -19,8 +19,12 @@ return new class extends Migration
             $table->string('WindowCovering');
             $table->string('SwimmingPoolConditioning');
             $table->string('Gym');
+            $table->string('LaundryRoom');
+            $table->string('Microwave');
             $table->unsignedBigInteger('landloard_id');
             $table->foreign('landloard_id')->references('id')->on('users');
+            $table->unsignedBigInteger('property_id');
+            $table->foreign('property_id')->references('id')->on('properties');
             $table->timestamps();
         });
     }

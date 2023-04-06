@@ -1,13 +1,9 @@
 @extends('app')
 @section('content')
-@php
-print_r($Pr);  
-
-@endphp
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <body style="background-color: #f5f7fb;">
     <!-- style="background-color: #f5f7fb;" -->
-      
+    
       <div class="bigresult row mt-5 mx-2 my-4">
           <div class="col-lg-3 col-md-10 px-3 bg-white rounded mx-2 " style="height: max-content; ">
             <div class="border-bottom  p-2 mb-4">
@@ -62,7 +58,11 @@ print_r($Pr);
             </div>
           </div>
           <div class="col-lg-9 col-md-12 row gap-5 ">
-            
+           @if (session('msg'))
+            <div class="alert alert-success">
+                {{ session('msg') }}
+            </div>
+            @endif
               <div class="singleroom col-lg-4 col-md-4 col-xs-4  me-4 " >
                 <div class="img-ico position-relative" >
                   <img src="/images/b-11.jpg" width="345px" alt="" class="rounded-top">

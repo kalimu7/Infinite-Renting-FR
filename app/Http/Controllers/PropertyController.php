@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\properties;
+use App\Models\MediaProperty;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class PropertyController extends Controller
 {
@@ -11,7 +13,8 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        $properties = properties::all();
+        $property = properties::with("mediaproperty")->get();
+        die(print_r($property));
         return view('properties.index')->with('Pr',$properties);
     }
 
@@ -28,36 +31,90 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|max:255',
+            'pro-desc' => 'required|max:255',
+            'price' => 'required|numeric|min:0',
+            'area' => 'required|numeric|min:0',
+            'address' => 'required|max:255',
+            'city' => 'required|max:255',
+            'state' => 'required|max:255',
+            'type' => 'required|max:255',
+            'country' => 'required|max:255',
+            'rooms' => 'required|integer|min:0',
+            'bedrooms' => 'required|integer|min:0',
+            'garages' => 'required|integer|min:0',
+            'bathrooms' => 'required|integer|min:0',
+            'video' => 'mimes:mp4|max:30000',
+            'images' => 'required|array',
+            'images.*' => 'required|image',
+            
+        ]);
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+        $features = implode(',', $request->input('check'));
+        
         // ***first send the essential data***
-        // $request->input('title');
-        // $request->input('pro-desc');
-        // $request->input('price');
-        // $request->input('country');
-        // $request->input('area');
-        // $request->input('address');
-        // $request->input('city');
-        // $request->input('state');
-        // $request->input('type');
-        // $request->input('rooms');
-        // $request->input('bathrooms');
+        $properties = new properties;
+        $properties->title=$request->input('title');
+        $properties->description=$request->input('pro-desc');
+        $properties->price=$request->input('price');
+        $properties->area=$request->input('area');
+        $properties->adrress=$request->input('address');
+        $properties->city=$request->input('city');
+        $properties->state=$request->input('state');
+        $properties->type=$request->input('type');
+        $properties->country=$request->input('country');
+        $properties->rooms_number=$request->input('rooms');
+        $properties->beedrooms_number=$request->input('bedrooms');
+        $properties->garages_number=$request->input('garages');
+        $properties->bath_number=$request->input('bathrooms');
+        $properties->landloard_id=auth()->user()->id;
+        $properties->features=$features;
+
+        $properties->save();
+
         // ***here i try handling the images*****
         
+        $video = $request->file('video');
         $images = $request->file('images');
         $path = public_path('images');
+        $pathv = public_path('video');
+        if($video){
+            $namev = $video->getClientOriginalName();
+            $video->move($pathv, $namev);
+        }else{
+            $namev = '';
+        }
         foreach ($images as $image) {
             $name = $image->getClientOriginalName();
             $image->move($path, $name);
-            echo $name;
+            $img = new MediaProperty;
+            $img->image_path=$name;
+            $img->property_id=$properties->id;
+            $img->landloard_id=auth()->user()->id;
+            $img->video_path = $namev;
             
+            $img->save();
         }
+        
+    return redirect('/properties')->with('msg','new property added ');
+
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        
+        // $property = properties::with('mediaproperty')->where("id","=",$id);
+        $property = properties::with('mediaproperty')->find($id);
+        dd($property);
     }
 
     /**

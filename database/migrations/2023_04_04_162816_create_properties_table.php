@@ -15,14 +15,20 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
+            $table->float('price');
+            $table->float('area');
             $table->string('adrress');
-            $table->string('images');
+            $table->string('city');
+            $table->string('state');
+            $table->string('country');
             $table->string('type');
-            $table->string('video');
             $table->integer('rooms_number');
             $table->integer('beedrooms_number');
-            $table->integer('bath_number');
             $table->integer('garages_number');
+            $table->integer('bath_number');
+            $table->string('features');
+            $table->unsignedBigInteger('landloard_id');
+            $table->foreign('landloard_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
