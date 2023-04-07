@@ -27,8 +27,8 @@ return new class extends Migration
             $table->integer('garages_number');
             $table->integer('bath_number');
             $table->string('features');
-            $table->unsignedBigInteger('landloard_id');
-            $table->foreign('landloard_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

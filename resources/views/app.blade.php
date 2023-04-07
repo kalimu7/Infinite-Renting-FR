@@ -28,6 +28,12 @@
               <a class="nav-item nav-link " href="/register">Sign Up</a>
               <span>/</span>
               <a class="nav-item nav-link" href="/login">Sign In</a>
+              @if(auth()->user())
+              <form method="POST" action="{{ route('logout') }}" x-data>
+                @csrf
+                <button type="submit" class="btn btn-primary">logout</button>
+              </form>
+              @endif
             </div>
             <a class="nav-item nav-link adP text-center text-white py-2 px-4 rounded active" href="#">Add Property</a>
           </div>

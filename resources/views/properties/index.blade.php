@@ -63,126 +63,73 @@
                 {{ session('msg') }}
             </div>
             @endif
-              <div class="singleroom col-lg-4 col-md-4 col-xs-4  me-4 " >
-                <div class="img-ico position-relative" >
-                  <img src="/images/b-11.jpg" width="345px" alt="" class="rounded-top">
-                  <div class="icons position-absolute bottom-0 d-flex justify-content-between p-3" style="width: 345px;"  >
-                    <a href="" class="text-white">$9000/Mo</a>
-                    <a href="" class="text-white  "><i class="fa-solid fa-image p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
-                    <a href="" class="text-white  "><i class="fa-sharp fa-solid fa-link p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
+            @foreach ($Pr as $p)
+            
+            @foreach ($p['properties'] as $prop)
+            <div class="singleroom col-lg-4 col-md-4 col-xs-4  me-4 "  >
+              
+              <div class="img-ico position-relative " >
+                  <div class="carousel ">
+                      <div id="carouselExample{{$prop['id']}}" class="carousel slide" style="width: 345px;"  >
+                          
+                          <div class="carousel-inner">
+                              
+                              {{-- ***here i have to loop for images from my database*** --}}
+                              @foreach($prop['mediaproperty'] as $img)
+                                  @if($loop->first)
+                                      <div class="carousel-item active">
+                                          <img src="/images/{{$img['image_path']}}" class="d-block w-100" height="258px" alt="...">
+                                      </div>
+                                      @continue
+                                  @endif
+                                  
+                                  <div class="carousel-item ">
+                                      <img src="/images/{{$img['image_path']}}" class="d-block w-100" height="258px" alt="...">
+                                  </div>
+                              @endforeach
+                              {{-- ***here i have to loop for images from my database*** --}}
+                              
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample{{$prop['id']}}" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample{{$prop['id']}}" data-bs-slide="next">
+                              <span  class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                          </button>
+                      </div>
                   </div>
-                </div>
-                <div class="roominfo bg-white  p-3 rounded-bottom" style="width: 345px;">
-                    <p class="">Real House Luxury Villa</p>
-                    <p class="cl "><i class="fa-solid fa-location-dot me-3"></i>Est St, 77 - Central Park South, NYC</p>
-                    <div class="d-flex justify-content-between">
-                      <p class="cl"><i class="fa-solid fa-bed me-2"></i>6 Bedrooms</p>
-                      <p class="cl"><i class="fa-solid fa-bath me-2"></i>3 Bathrooms</p>
-                    </div>
-                    <div class="d-flex justify-content-between" >
-                      <p class="cl "><i class="fa-solid fa-chart-area me-2"></i>720 sq ft</p>
-                       <p class="cl" style="margin-right: 20px;"><i class="fa-solid fa-car me-2" ></i>2 Garages  </p>
-                    </div>
-                    <div class="userinfo d-flex align-items-center justify-content-between border-top ">
-                        <div class=" pt-2 d-flex align-items-center">
-                          <img src="/images/us.jpg" class="rounded-circle me-2" width="50px" alt="">
-                          <span class="cl">Mahjour</span>
-                        </div>
-                        <span class="cl">2 months ago</span>
-                    </div>
-                </div>
-              </div>
-  
-              <div class="singleroom col-lg-4 col-md-4 col-xs-4  me-4 "  >
-                <div class="img-ico position-relative" >
-                  <img src="/images/b-11.jpg" width="345px" alt="" class="rounded-top">
                   <div class="icons position-absolute bottom-0 d-flex justify-content-between p-3" style="width: 345px;"  >
-                    <a href="" class="text-white">$9000/Mo</a>
-                    <a href="" class="text-white  "><i class="fa-solid fa-image p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
-                    <a href="" class="text-white  "><i class="fa-sharp fa-solid fa-link p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
+                      <a href="" class="text-white">${{$prop['price']}}/Mo</a>
+                      <a href="" class="text-white  "><i class="fa-solid fa-image p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
+                      <a href="" class="text-white  "><i class="fa-sharp fa-solid fa-link p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
                   </div>
-                </div>
-                <div class="roominfo bg-white  p-3 rounded-bottom" style="width: 345px;">
-                    <p class="">Real House Luxury Villa</p>
-                    <p class="cl "><i class="fa-solid fa-location-dot me-3"></i>Est St, 77 - Central Park South, NYC</p>
-                    <div class="d-flex justify-content-between">
-                      <p class="cl"><i class="fa-solid fa-bed me-2"></i>6 Bedrooms</p>
-                      <p class="cl"><i class="fa-solid fa-bath me-2"></i>3 Bathrooms</p>
-                    </div>
-                    <div class="d-flex justify-content-between" >
-                      <p class="cl "><i class="fa-solid fa-chart-area me-2"></i>720 sq ft</p>
-                       <p class="cl" style="margin-right: 20px;"><i class="fa-solid fa-car me-2" ></i>2 Garages  </p>
-                    </div>
-                    <div class="userinfo d-flex align-items-center justify-content-between border-top ">
-                        <div class=" pt-2 d-flex align-items-center">
-                          <img src="/images/us.jpg" class="rounded-circle me-2" width="50px" alt="">
-                          <span class="cl">Mahjour</span>
-                        </div>
-                        <span class="cl">2 months ago</span>
-                    </div>
-                </div>
               </div>
-  
-  
-              <div class="singleroom col-lg-4 col-md-4 col-xs-4  me-4 "  >
-                <div class="img-ico position-relative" >
-                  <img src="/images/b-11.jpg" width="345px" alt=""class="rounded-top" >
-                  <div class="icons position-absolute bottom-0 d-flex justify-content-between p-3" style="width: 345px;"  >
-                    <a href="" class="text-white">$9000/Mo</a>
-                    <a href="" class="text-white  "><i class="fa-solid fa-image p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
-                    <a href="" class="text-white  "><i class="fa-sharp fa-solid fa-link p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
+              <div class="roominfo bg-white  p-3 rounded-bottom" style="width: 345px;">
+                  <p class="">{{$p['title']}}</p>
+                  <p class="cl "><i class="fa-solid fa-location-dot me-3"></i>{{$prop['adrress']}}</p>
+                  <div class="d-flex justify-content-between">
+                      <p class="cl"><i class="fa-solid fa-bed me-2"></i>{{$prop['beedrooms_number']}} Bedrooms</p>
+                      <p class="cl"><i class="fa-solid fa-bath me-2"></i>{{$prop['bath_number']}} Bathrooms</p>
                   </div>
-                </div>
-                <div class="roominfo bg-white  p-3 rounded-bottom" style="width: 345px;">
-                    <p class="">Real House Luxury Villa</p>
-                    <p class="cl "><i class="fa-solid fa-location-dot me-3"></i>Est St, 77 - Central Park South, NYC</p>
-                    <div class="d-flex justify-content-between">
-                      <p class="cl"><i class="fa-solid fa-bed me-2"></i>6 Bedrooms</p>
-                      <p class="cl"><i class="fa-solid fa-bath me-2"></i>3 Bathrooms</p>
-                    </div>
-                    <div class="d-flex justify-content-between" >
-                      <p class="cl "><i class="fa-solid fa-chart-area me-2"></i>720 sq ft</p>
-                       <p class="cl" style="margin-right: 20px;"><i class="fa-solid fa-car me-2" ></i>2 Garages  </p>
-                    </div>
-                    <div class="userinfo d-flex align-items-center justify-content-between border-top ">
-                        <div class=" pt-2 d-flex align-items-center">
-                          <img src="/images/us.jpg" class="rounded-circle me-2" width="50px" alt="">
-                          <span class="cl">Mahjour</span>
-                        </div>
-                        <span class="cl">2 months ago</span>
-                    </div>
-                </div>
-              </div>
-  
-              <div class="singleroom col-lg-4 col-md-4 col-xs-3  me-4 "  >
-                <div class="img-ico position-relative" >
-                  <img src="/images/b-11.jpg" width="345px" alt="" class="rounded-top">
-                  <div class="icons position-absolute bottom-0 d-flex justify-content-between p-3" style="width: 345px;"  >
-                    <a href="" class="text-white">$9000/Mo</a>
-                    <a href="" class="text-white  "><i class="fa-solid fa-image p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
-                    <a href="" class="text-white  "><i class="fa-sharp fa-solid fa-link p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
+                
+                  <div class="d-flex justify-content-between" >
+                    <p class="cl "><i class="fa-solid fa-chart-area me-2"></i>{{$prop['area']}} sq ft</p>
+                     <p class="cl" style="margin-right: 20px;"><i class="fa-solid fa-car me-2" ></i>{{$prop['garages_number']}} Garages  </p>
                   </div>
-                </div>
-                <div class="roominfo bg-white  p-3 rounded-bottom" style="width: 345px;">
-                    <p class="">Real House Luxury Villa</p>
-                    <p class="cl "><i class="fa-solid fa-location-dot me-3"></i>Est St, 77 - Central Park South, NYC</p>
-                    <div class="d-flex justify-content-between">
-                      <p class="cl"><i class="fa-solid fa-bed me-2"></i>6 Bedrooms</p>
-                      <p class="cl"><i class="fa-solid fa-bath me-2"></i>3 Bathrooms</p>
-                    </div>
-                    <div class="d-flex justify-content-between" >
-                      <p class="cl "><i class="fa-solid fa-chart-area me-2"></i>720 sq ft</p>
-                       <p class="cl" style="margin-right: 20px;"><i class="fa-solid fa-car me-2" ></i>2 Garages  </p>
-                    </div>
-                    <div class="userinfo d-flex align-items-center justify-content-between border-top ">
-                        <div class=" pt-2 d-flex align-items-center">
-                          <img src="/images/us.jpg" class="rounded-circle me-2" width="50px" alt="">
-                          <span class="cl">Mahjour</span>
-                        </div>
-                        <span class="cl">2 months ago</span>
-                    </div>
-                </div>
+                  <div class="userinfo d-flex align-items-center justify-content-between border-top ">
+                      <div class=" pt-2 d-flex align-items-center">
+                        <img src="/images/us.jpg" class="rounded-circle me-2" width="50px" alt="">
+                        <span class="cl">{{$p['name']}}</span>
+                      </div>
+                      <span class="cl">2 months ago</span>
+                  </div>
               </div>
+            </div>
+            @endforeach
+
+            @endforeach
   
           </div>
       </div>
