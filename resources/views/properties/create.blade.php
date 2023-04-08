@@ -51,7 +51,7 @@
                                 <div class="col-lg-6 col-md-12">
                                     <p class="no-mb last">
                                         <label for="area">Area</label>
-                                        <input type="text" name="area" placeholder="Sqft" id="area">
+                                        <input type="number" name="area" placeholder="Sqft" id="area">
                                     </p>
                                 </div>
                             </div>

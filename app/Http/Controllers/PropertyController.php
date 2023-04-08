@@ -146,6 +146,8 @@ class PropertyController extends Controller
      */
     public function update(Request $request, $id)
 {
+    
+    
     $validator = Validator::make($request->all(), [
         'title' => 'required|max:255',
         'pro-desc' => 'required|max:255',
@@ -195,8 +197,8 @@ class PropertyController extends Controller
     $property->save();
 
     // delete the old images
-    if(!empty($images)){
-    MediaProperty::where('properties_id', $id)->delete();
+    if($request->hasfile('images')){
+        MediaProperty::where('properties_id', $id)->delete();
     }
     // upload the new images and video
     $video = $request->file('video');
@@ -204,13 +206,19 @@ class PropertyController extends Controller
     $path = public_path('images');
     $pathv = public_path('video');
 
-    if ($video) {
+    if($video && empty($images)) {
         $namev = $video->getClientOriginalName();
         $video->move($pathv, $namev);
-    } else {
-        $namev = '';
+        $img = MediaProperty::where('properties_id', $id)->first();
+        $img->video_path = $namev;
+        $img->save();
+
+
+    }elseif(empty($video)){
+        $namev = $request->input('myvideopath');
     }
     if(!empty($images)){
+    
     foreach ($images as $image) {
         $name = $image->getClientOriginalName();
         $image->move($path, $name);

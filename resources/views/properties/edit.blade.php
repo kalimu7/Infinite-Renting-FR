@@ -20,7 +20,7 @@
                     <div class="property-form-group">
                         <form action="{{url('properties/'.$pr['id'])}}" method="Post" enctype="multipart/form-data">
                             @csrf
-                            @method("PATCH");
+                            @method("PATCH")
                             <div class="row">
                                 <div class="col-md-12">
                                     <p>
@@ -59,13 +59,22 @@
                     </div>
                 </div>
                 <div class="ms-5">
-                    <div>
-                        <img  src="/images/1card.jpg" alt="" width="200px" >
-                        a
-                    </div>
+                    
+                    
+                        
+                    
                 </div>
                 <div class="single-add-property">
                     <h3>property Media</h3>
+                    <input type="text" name="myvideopath" value="{{$pr['mediaproperty'][0]['video_path']}}">
+                    <div class="d-flex align-items-start my-3">
+                        @foreach ($pr['mediaproperty'] as $img)
+                        {{$img['video_path']}}
+
+                        <img src="/images/{{$img['image_path']}}" alt="" style="width: 150px;" height="130px" class="rounded mx-3" />
+                        @endforeach
+                    </div>
+                
                     <div class="imagesfromdatabase">
                         
                     </div>
@@ -78,7 +87,7 @@
 
                                         <i class="fa-solid fa-cloud-arrow-up"></i>
 
-                                        <span id="span-alert">Click Here Or Drop Files To Upload</span>
+                                        <span id="span-alert">By updating your old pics you goona override it with new one</span>
                                     </div>
                                     <input type="file" name="images[]" multiple id="fileInput" style="display:none">
                                 </div>
@@ -120,13 +129,11 @@
                         <div class="row">
                             <div class="dropzone">
                                 <div class="aploadInsideConatiner" id="uplvideo">
-
-
+                                    
                                     <i class="fa-solid fa-cloud-arrow-up"></i>
-
                                     <span id="span-alertvideo">Click Here to upload a video of your property</span>
                                 </div>
-                                <input type="file" name="video" multiple id="filevideo" style="display:none">
+                                <input type="file" name="video" multiple id="filevideo" style="display:none" >
                             </div>
                         </div>
                     </div>

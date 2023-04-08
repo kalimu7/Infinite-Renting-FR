@@ -25,9 +25,12 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div class="navbar-nav align-items-center gap-3">
             <div class="d-flex align-items-center">
+              @if(!auth()->user())
               <a class="nav-item nav-link " href="/register">Sign Up</a>
               <span>/</span>
               <a class="nav-item nav-link" href="/login">Sign In</a>
+              @endif
+
               @if(auth()->user())
               <form method="POST" action="{{ route('logout') }}" x-data>
                 @csrf
