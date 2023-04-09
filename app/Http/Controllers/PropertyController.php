@@ -240,10 +240,11 @@ class PropertyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy( $id)
     {
 
-        //
+        properties::destroy($id);
+        return redirect('dash')->with('flash_message','deleted successfully');
         
     }
 }

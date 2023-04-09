@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('image_path');
             $table->string('video_path')->nullable();
             $table->unsignedBigInteger('properties_id');
-            $table->foreign('properties_id')->references('id')->on('properties');
+            $table->foreign('properties_id')->references('id')->on('properties')->onDelete('cascade');
             $table->unsignedBigInteger('landloard_id');
-            $table->foreign('landloard_id')->references('id')->on('users');
+            $table->foreign('landloard_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
