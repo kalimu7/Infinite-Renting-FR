@@ -101,9 +101,9 @@
                       </div>
                   </div>
                   <div class="icons position-absolute bottom-0 d-flex justify-content-between p-3" style="width: 345px;"  >
-                      <a href="" class="text-white">${{$prop['price']}}/Mo</a>
-                      <a href="" class="text-white  "><i class="fa-solid fa-image p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
-                      <a href="" class="text-white  "><i class="fa-sharp fa-solid fa-link p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
+                      <a href="/properties/{{$prop['id']}}" class="text-white">${{$prop['price']}}/Mo</a>
+                      <a href="/properties/{{$prop['id']}}" class="text-white  "><i class="fa-solid fa-image p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
+                      <a href="/properties/{{$prop['id']}}" class="text-white  "><i class="fa-sharp fa-solid fa-link p-2 rounded" style="background-color: rgba(74, 74, 76, 0.5);" ></i></a>
                   </div>
               </div>
               <div class="roominfo bg-white  p-3 rounded-bottom" style="width: 345px;">
