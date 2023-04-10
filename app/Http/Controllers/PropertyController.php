@@ -125,8 +125,9 @@ class PropertyController extends Controller
         // $property = properties::with('mediaproperty')->where("id","=",$id);
         // $property = properties::with('mediaproperty')->find($id);
         $property = properties::with("mediaproperty","user")->find($id);
-        // echo $property;
-        // die; 
+        $property['features'] = explode(',',$property['features']);
+        
+        
         return view('properties.show')->with('pr',$property);
     }
 

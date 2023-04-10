@@ -14,7 +14,7 @@
                     @endforeach
                 </ul>
                 </div>
-            []@endif
+            @endif
                 <div class="single-add-property">
                     <h3>Property description and price</h3>
                     <div class="property-form-group">
@@ -200,7 +200,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-a" type="checkbox" name="Air" value="aircondition" >
+                                            <input id="check-a" type="checkbox" name="Air" value="Air Conditioning" >
                                             <label for="check-a">Air Conditioning</label>
                                         </div>
                                     </div>
@@ -208,7 +208,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-b" type="checkbox" name="check[]" value="swimming" >
+                                            <input id="check-b" type="checkbox" name="check[]" value="Swimming Pool" >
                                             <label for="check-b">Swimming Pool</label>
                                         </div>
                                     </div>
@@ -216,7 +216,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-c" type="checkbox" name="Check[]" value="heating">
+                                            <input id="check-c" type="checkbox" name="Check[]" value="Central Heating">
                                             <label for="check-c">Central Heating</label>
                                         </div>
                                     </div>
@@ -224,7 +224,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-d" type="checkbox" name="check[]" value="laundry">
+                                            <input id="check-d" type="checkbox" name="check[]" value="Laundry Room">
                                             <label for="check-d">Laundry Room</label>
                                         </div>
                                     </div>
@@ -232,7 +232,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-e" type="checkbox" name="check[]" value="gym">
+                                            <input id="check-e" type="checkbox" name="check[]" value="Gym">
                                             <label for="check-e">Gym</label>
                                         </div>
                                     </div>
@@ -248,7 +248,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-h" type="checkbox" name="check[]" value="windowcovering">
+                                            <input id="check-h" type="checkbox" name="check[]" value="Window Covering">
                                             <label for="check-h">Window Covering</label>
                                         </div>
                                     </div>
@@ -256,7 +256,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-i" type="checkbox" name="check[]" value="refrigetor">
+                                            <input id="check-i" type="checkbox" name="check[]" value="Refrigerator">
                                             <label for="check-i">Refrigerator</label>
                                         </div>
                                     </div>
@@ -264,7 +264,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-j" type="checkbox" name="check[]" value="tvcablewifi">
+                                            <input id="check-j" type="checkbox" name="check[]" value="TV Cable & WIFI">
                                             <label for="check-j">TV Cable & WIFI</label>
                                         </div>
                                     </div>
@@ -272,7 +272,7 @@
                                 <li class="fl-wrap filter-tags clearfix">
                                     <div class="checkboxes float-left">
                                         <div class="filter-tags-wrap">
-                                            <input id="check-k" type="checkbox" name="check[]" value="microwave">
+                                            <input id="check-k" type="checkbox" name="check[]" value="Microwave">
                                             <label for="check-k">Microwave</label>
                                         </div>
                                     </div>

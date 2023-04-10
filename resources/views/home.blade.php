@@ -51,7 +51,7 @@
       </div>
     </div>
     <div class="text-center">
-      <button style="background-color: #25323E;" class="btn text-white mx-1 " >View More</button>
+      <a href="/properties" style="background-color: #25323E;" class="btn text-white mx-1 " >View More</a>
       <h3 class="my-3">The Most Rental Listings</h3>
       <p class="my-2">Choose from over 1 million apartments, houses, condos, and townhomes for rent</p>
     </div>

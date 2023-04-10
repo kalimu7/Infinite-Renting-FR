@@ -62,15 +62,9 @@
       <h6 class="">Amenities</h6>
       <hr style="width: 60px;border: 2px solid #0e2487;">
       <ul class="list">
-        <li class="list-item  "><i class="fa-solid fa-square-check scl " ></i> Air Cond</li>
-        <li class="list-item "><i class="fa-solid fa-square-check scl " ></i> Dishwasher</li>
-        <li class="list-item "><i class="fa-solid fa-square-check scl " ></i> Parking</li>    
-        <li class="list-item "><i class="fa-solid fa-square-check scl " ></i> Balcony</li>
-        <li class="list-item "><i class="fa-solid fa-square-check scl " ></i> Bedding</li>
-        <li class="list-item "><i class="fa-solid fa-square-check scl " ></i> Pool</li>    
-        <li class="list-item "><i class="fa-solid fa-square-check scl " ></i> Internet</li>
-        <li class="list-item "><i class="fa-solid fa-square-check scl " ></i> Cable TV</li>
-        <li class="list-item "><i class="fa-solid fa-square-check scl " ></i> Fridge</li>    
+        @foreach($pr['features'] as $amenity)
+        <li class="list-item  "><i class="fa-solid fa-square-check scl " ></i> {{$amenity}}</li>
+        @endforeach   
     </ul>
     </div>
     @if($pr['mediaproperty'][0]['video_path'])
@@ -104,7 +98,7 @@
           <p class="cl"><i class="fa-solid fa-envelope me-2"></i>{{$pr['user']['email']}}</p>
         </div>
         <div class="openchat my-2 px-3 py-3">
-          <button class="btn text-white" style="background-color:#25323E;">Chat the owner</button>
+          <a href="/chatify/{{$pr['user']['id']}}" class="btn text-white" style="background-color:#25323E;">Chat the owner</a>
         </div>
       </div>
 

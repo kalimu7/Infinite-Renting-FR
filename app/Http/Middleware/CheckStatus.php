@@ -15,9 +15,9 @@ class CheckStatus
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth()->user()->status == 1){
+        if( Auth()->check() && Auth()->user()->status == 1){
             return $next($request);
         }
-        return redirect('/profile');
+        return redirect('/');
     }
 }

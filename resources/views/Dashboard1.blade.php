@@ -7,7 +7,10 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper" style="background-color: #dee1e4;">
-            <div class="sidebar-heading text-center py-4  fs-4 fw-bold text-uppercase border-bottom"><h3> Mahjour </h3>
+            
+                
+            
+            <div class="sidebar-heading text-center py-4  fs-4 fw-bold text-uppercase border-bottom"><h3>{{$Pr[0]['name']}}</h3>
               <img class="img-account-profile rounded-circle mb-2 mx-auto" width="100px" src="/images/us.jpg" alt="">
               <p>owner</p>
             </div>
@@ -19,8 +22,8 @@
                 <button href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold PEB"><i class="fa-solid fa-user me-2"></i>Profile</button>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold MPB"><i class="fa-solid fa-house me-2"></i>My properties</a>
                 <a href="/properties/create" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fa-solid fa-plus me-2"></i>Add Property</a>
-                <button href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold "><i
-                        class="fas fa-comment-dots me-2"></i>Chat</button>
+                <a href="/chatify" class="list-group-item list-group-item-action bg-transparent second-text fw-bold "><i
+                        class="fas fa-comment-dots me-2"></i>Chat</a>
                         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
                 <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
@@ -102,81 +105,72 @@
                 {{ session('flash_message') }}
                 </div>
                 @endif
-                <div class="row my-5 LT">
-                  <h3>My properties</h3>
-                    <table class="table align-middle mb-0 bg-white">
-                        <thead class="bg-light">
-                          <tr>
-                            <th></th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Actions</th>
-                            
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="d-flex align-items-start">
-                                <img
-                                    src="images/b-1.jpg"
-                                    alt=""
-                                    style="width: 120px;"
-                                    class="rounded"
-                                    />
-                                <div class="ms-3 ">
-                                  <p class="fw-bold mb-1">Real estate</p>
-                                  <p class="text-muted mb-0">Est St, 77 - Central Park South, NYC</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <p class="fw-normal mb-1">2023/07/12</p>
-                            </td>
-                            <td>
-                              <span class="badge badge-success bg-success rounded-pill text-white">Active</span>
-                            </td>
-                            
-                            <td>
-                              <button type="button" class="btn badge badge-success  btn-warning rounded-pill">
-                                Edit
-                              </button>
-                            </td>
-                            
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="d-flex align-items-start">
-                                <img
-                                    src="images/b-1.jpg"
-                                    alt=""
-                                    style="width: 120px;"
-                                    class="rounded"
-                                    />
-                                <div class="ms-3 ">
-                                  <p class="fw-bold mb-1">Real estate</p>
-                                  <p class="text-muted mb-0">Est St, 77 - Central Park South, NYC</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <p class="fw-normal mb-1">2023/07/12</p>
-                            </td>
-                            <td>
-                              <span class="badge badge-success bg-danger rounded-pill text-white">not Active</span>
-                            </td>
-                            
-                            <td>
+                
+                {{-- ****************************************************************************************** --}}
+                <div class=" mx-4">
+                    <div class="row my-5 LT">
+                      <h3>My properties</h3>
+                        <table class="table align-middle mb-0 bg-white">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th></th>
+                                    <th>Position</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                    <th></th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                              
+                              @foreach($Pr as $p)
+                              
+                              @foreach ($p['properties'] as $m)
+                              
+                              {{-- @foreach($pp['mediaproperty'] as $img) --}}
+      
+                              <tr>
+                                <td>
+                                  
+                                  <div class="d-flex align-items-start">
+                                    <img src="/images/{{$m['mediaproperty'][0]['image_path']}}" alt="" style="width: 120px;" class="rounded"/>
+                                    <div class="ms-3 ">
+                                      <p class="fw-bold mb-1">{{$m['title']}}</p>
+                                      <p class="text-muted mb-0">{{$m['adrress']}}</p>
+                                      {{$m['id']}}
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="fw-normal mb-1">2023/07/12</p>
+                                </td>
+                                <td>
+                                  <span class="badge badge-success bg-success rounded-pill text-white">Active</span>
+                                </td>
                                 
-                              <button type="button" class="btn badge badge-success  btn-warning rounded-pill">
-                                Edit
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                </div>
-
+                                <td>
+                                
+                                  <a href="/properties/{{$m['id']}}/edit" type="submit" class="btn badge badge-success  btn-warning rounded-pill">Edit</a>
+                                
+                                </td>
+                                <td>
+                                  <form method="POST" action="{{url('properties/'.$m['id'])}}" accept-charset="UTF-8" style="display:inline">
+                                      {{ method_field('DELETE') }}
+                                      {{ csrf_field() }}
+                                      <button class="btn" type="submit">
+                                          <i class="fa-solid fa-trash text-danger"></i>
+                                      </button>
+                                  </form>
+                                  
+                                </td>
+                              </tr>
+                              {{-- @endforeach --}}
+                              @endforeach
+                              @endforeach
+                            </tbody>
+                          </table>
+                    </div>
+                  </div>
+                {{-- ****************************************************************************************** --}}
             </div>
             <!-- ****profile*** -->
             <div class="profile PE">

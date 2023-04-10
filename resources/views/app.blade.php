@@ -14,9 +14,9 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-white px-3">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-3 ">
         <div>
-          <img src="./images/icons8-cabin-64.png" alt="" srcset="" width="70px" >
+          <img src="./images/infinterentingblack.png" alt="" srcset="" width="70px" >
             <a class="navbar-brand" href="/home">Infinite Renting</a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,14 +38,14 @@
               </form>
               @endif
             </div>
-            <a class="nav-item nav-link adP text-center text-white py-2 px-4 rounded active" href="#">Add Property</a>
+            <a class="nav-item nav-link adP text-center text-white py-2 px-4 rounded active" href="/dash">Add Property</a>
           </div>
         </div>
     </nav>
     @yield('content')
     <footer class=" d-flex align-items-start   px-5 py-3" style="background-color: #25323E;">
         <div class="col-3 ">
-          <img src="./images/infinte_Renting__4_-removebg-preview.png" alt="" srcset="" width="70px" style="border-radius: 50%;" >
+          <img src="./images/infinte_Renting.png" alt="" srcset="" width="70px" style="border-radius: 50%;" >
           <a class="navbar-brand" href="#" style="color: #93979A;" >Infinite Renting</a>
           <div class="mt-3 d-flex   ">
             <i class="bi bi-facebook ms-1 me-4" style="color: #93979A;"></i>

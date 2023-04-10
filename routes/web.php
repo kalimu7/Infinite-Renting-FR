@@ -24,6 +24,10 @@ Route::middleware([
     Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
     Route::get('/profile',[PagesController::class,'profile']);
 });
+// Route::middleware('checkstatus',function (){})
+// Route::get('/dash',[PagesController::class,'dash'])->middleware('checkstatus');
+// Route::resource('/properties',PropertyController::class)->only('index','show');
 Route::resource('/properties',PropertyController::class);
-Route::get('/dash',[PagesController::class,'dash'])->middleware('checkstatus');
-
+Route::middleware('checkstatus')->group(function () {
+    Route::get('/dash', [PagesController::class, 'dash']);
+});
