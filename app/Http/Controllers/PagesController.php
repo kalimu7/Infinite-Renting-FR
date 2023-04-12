@@ -9,7 +9,13 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home(){
-        return view('home');
+        $cities = properties::select('city')->get();
+        $city = [];
+        foreach($cities as $cs){
+            array_push($city,$cs['city']);
+        }
+        
+        return view('home')->with('city',$city);
     }
     public function profile(){
         return view('profile');
@@ -27,5 +33,13 @@ class PagesController extends Controller
         // }
         // die;
         return view('dashboard1')->with('Pr',$property);
+    }
+    public function search(Request $request){
+        $city = $request->input('searchname');
+        
+        $property = user::with("properties.mediaproperty")->wherehas('properties',function($query) use ($city){
+            $query->where('city','=', $city);
+        })->get();
+        return view('properties.indexx')->with('Pr',$property)->with('city',$city);
     }
 }

@@ -12,16 +12,21 @@ class PropertyController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+   
+    public function index(Request $request)
     {
+        
+            $property = user::with("properties.mediaproperty")->get();
+            $cities = properties::select('city')->get();
 
         // $property = properties::with("mediaproperty")->get();
-        $property = user::with("properties.mediaproperty")->get();
+        
+        
         // foreach($property as $p){
         //     echo $p;
         // }
         // die;
-        return view('properties.index')->with('Pr',$property);
+        return view('properties.index')->with('Pr',$property)->with('city',$cities);
         
         
         

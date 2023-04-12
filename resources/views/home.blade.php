@@ -1,3 +1,7 @@
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 @extends('app')
 @section('content')
 <body>
@@ -7,10 +11,15 @@
     <div class="firstSection">
         <h1 class="text-white display-1">Discover Your New Home</h1>
         <p class="display-5 text-white">Helping  renters find their perfect fit.</p>
-        <div class="d-flex">
-          <input type="text" class="form-control" placeholder="Search place" aria-label="Username" aria-describedby="basic-addon1"> 
-          <button style="background-color: #25323E;" class="btn text-white mx-2 px-3 ">Search</button>
-        </div>
+       
+          <form action="/search" method="post" class="d-flex w-50 mt-5">
+            @csrf
+            <input type="text" id="searchInput" class="form-control" placeholder="Search place" aria-label="Username" aria-describedby="basic-addon1" name="searchname"> 
+  
+            <button type="submit" style="background-color: #25323E;" class="btn text-white mx-2 px-3 ">Search</button>
+          </form>
+        
+        
     </div>
     <div class="secondsection p-5">
       <h3 class="text-center my-5">Explore Rentals in Dalian</h3>
@@ -120,6 +129,24 @@
       </div>
     </div>
     
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+      
+          
+      <script>
+       
+        $(function() {
+          
+          var available =@json($city);
+          console.log(available);
+          $("#searchInput").autocomplete({
+            source:available
+          });
+        });
+
+        
+
+
+        </script>
+        
 </body>
 @endsection

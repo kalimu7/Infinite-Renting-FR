@@ -30,4 +30,6 @@ Route::middleware([
 Route::resource('/properties',PropertyController::class);
 Route::middleware('checkstatus')->group(function () {
     Route::get('/dash', [PagesController::class, 'dash']);
+    Route::post('/search', [PagesController::class,'search']);
+    Route::get('/properties/{}',[PagesController::class, 'dash']);
 });

@@ -12,16 +12,14 @@
             <div class="search form">
               <form action="" class="p-3">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Enter an adrress" aria-label="Username" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Enter a keyword" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
   
                 <select class="form-select my-3" aria-label="Default select example" id="locationfilter">
-                  <option selected disabled hidden >
-                    <span class="select-icon"><i class="fa-solid fa-location-dot"></i>Property location</span>
-                  </option>
-                  @foreach($city as $s)
-                  <option value="{{$s['city']}}">{{$s['city']}}</option>
-                  @endforeach
+                  
+                  
+                  <option selected disabled value="{{$city}}">{{$city}}</option>
+                  
                   
                 </select>
   
@@ -36,7 +34,7 @@
   
                 <select class="form-select my-3" aria-label="Default select example" id="bedrooms">
                   <option selected disabled hidden >
-                    <span class="select-icon"><i class="fa-solid fa-location-dot"></i>Bedrooms</span>
+                    <span class="select-icon"><i class="fa-solid fa-location-dot" ></i>Bedrooms</span>
                   </option>
                   <option value="1"> One</option>
                   <option value="2">Two</option>
@@ -134,7 +132,7 @@
   
           </div>
       </div>
-      <script src="{{asset('JS/filter.js')}}" ></script>
+      {{-- <script src="{{asset('JS/filter.js')}}" ></script> --}}
 
   </body>
 @endsection
