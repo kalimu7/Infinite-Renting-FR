@@ -134,7 +134,7 @@
   
           </div>
       </div>
-      <script src="{{asset('JS/filter.js')}}" ></script>
+      {{-- <script src="{{asset('JS/filter.js')}}" ></script> --}}
 
   </body>
 @endsection

@@ -12,7 +12,7 @@
             <div class="search form">
               <form action="" class="p-3">
                 <div class="input-group mb-3">
-                  <input type="text" class="form-control" placeholder="Enter a keyword" aria-label="Username" aria-describedby="basic-addon1">
+                  <input type="text" class="form-control" placeholder="Enter a keyword" aria-label="Username" aria-describedby="basic-addon1" id="searchinput">
                 </div>
   
                 <select class="form-select my-3" aria-label="Default select example" id="locationfilter">
@@ -23,7 +23,7 @@
                   
                 </select>
   
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" id="selecttype">
                   <option selected disabled hidden >
                     <span class="select-icon"><i class="fa-solid fa-location-dot"></i>Property Type</span>
                   </option>
@@ -41,7 +41,7 @@
                   <option value="3">Three</option>
                 </select>
   
-                <select class="form-select my-3" aria-label="Default select example">
+                <select class="form-select my-3" aria-label="Default select example" id="selectbathrooms">
                   <option selected disabled hidden >
                     <span class="select-icon"><i class="fa-solid fa-location-dot"></i>Bathrooms</span>
                   </option>
@@ -107,10 +107,10 @@
               </div>
               <div class="roominfo bg-white  p-3 rounded-bottom" style="width: 345px;">
                   <p class="">{{$p['title']}}</p>
-                  <p class="cl "><i class="fa-solid fa-location-dot me-3"></i>{{$prop['adrress']}}</p>
+                  <p class="cl "><i class="fa-solid fa-location-dot me-3"></i><span class="Adss">{{$prop['adrress']}}</span></p>
                   <div class="d-flex justify-content-between">
-                      <p class="cl"><i class="fa-solid fa-bed me-2"></i>{{$prop['beedrooms_number']}} Bedrooms</p>
-                      <p class="cl"><i class="fa-solid fa-bath me-2"></i>{{$prop['bath_number']}} Bathrooms</p>
+                      <p class="cl"><i class="fa-solid fa-bed me-2 "></i><span class="bedroomsnmbr">{{$prop['beedrooms_number']}}</span> Bedrooms</p>
+                      <p class="cl"><i class="fa-solid fa-bath me-2"></i><span class="bathroomsnmbr">{{$prop['bath_number']}}</span><span class="propertytype d-none">{{$prop['type']}}</span> Bathrooms</p>
                   </div>
                 
                   <div class="d-flex justify-content-between" >
@@ -132,7 +132,7 @@
   
           </div>
       </div>
-      {{-- <script src="{{asset('JS/filter.js')}}" ></script> --}}
+      <script src="{{asset('JS/filter.js')}}" ></script>
 
   </body>
 @endsection
