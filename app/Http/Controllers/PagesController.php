@@ -34,12 +34,37 @@ class PagesController extends Controller
         // die;
         return view('dashboard1')->with('Pr',$property);
     }
-    public function search(Request $request){
-        $city = $request->input('searchname');
+
+    public function index()
+    {
         
-        $property = user::with("properties.mediaproperty")->wherehas('properties',function($query) use ($city){
-            $query->where('city','=', $city);
-        })->get();
+            $property = user::with("properties.mediaproperty")->get();
+            $cities = properties::select('city')->get();
+
+        // $property = properties::with("mediaproperty")->get();
+        
+        
+        // foreach($property as $p){
+        //     echo $p;
+        // }
+        // die;
+        return view('properties.index')->with('Pr',$property)->with('city',$cities);
+        
+        
+        
+        // dd($property);
+    }
+    public function search(Request $request){
+        
+        $city = $request->input('searchname');
+        if(!$city){
+            redirect('/property');
+        }
+        $property = properties::with("mediaproperty","user")->where('city','=',$city)->get();
+        // foreach($property as $p){
+            //     echo $p;
+            // }
+            // die;
         return view('properties.indexx')->with('Pr',$property)->with('city',$city);
     }
 }

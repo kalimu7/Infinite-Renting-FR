@@ -15,22 +15,8 @@ class PropertyController extends Controller
    
     public function index(Request $request)
     {
+        return redirect('/property');
         
-            $property = user::with("properties.mediaproperty")->get();
-            $cities = properties::select('city')->get();
-
-        // $property = properties::with("mediaproperty")->get();
-        
-        
-        // foreach($property as $p){
-        //     echo $p;
-        // }
-        // die;
-        return view('properties.index')->with('Pr',$property)->with('city',$cities);
-        
-        
-        
-        // dd($property);
     }
 
     /**

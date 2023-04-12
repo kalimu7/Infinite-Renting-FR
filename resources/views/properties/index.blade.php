@@ -25,7 +25,7 @@
                   
                 </select>
   
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" >
                   <option selected disabled hidden >
                     <span class="select-icon"><i class="fa-solid fa-location-dot"></i>Property Type</span>
                   </option>
@@ -134,7 +134,7 @@
   
           </div>
       </div>
-      {{-- <script src="{{asset('JS/filter.js')}}" ></script> --}}
+      <script src="{{asset('JS/filter.js')}}" ></script>
 
   </body>
 @endsection

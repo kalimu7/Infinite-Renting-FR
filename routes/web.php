@@ -27,9 +27,9 @@ Route::middleware([
 // Route::middleware('checkstatus',function (){})
 // Route::get('/dash',[PagesController::class,'dash'])->middleware('checkstatus');
 // Route::resource('/properties',PropertyController::class)->only('index','show');
-Route::resource('/properties',PropertyController::class);
+Route::get('/property', [PagesController::class, 'index']);
+Route::post('/search', [PagesController::class,'search']);
 Route::middleware('checkstatus')->group(function () {
+    Route::resource('/properties',PropertyController::class);
     Route::get('/dash', [PagesController::class, 'dash']);
-    Route::post('/search', [PagesController::class,'search']);
-    Route::get('/properties/{}',[PagesController::class, 'dash']);
 });

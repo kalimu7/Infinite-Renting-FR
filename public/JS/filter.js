@@ -50,12 +50,12 @@ searchinput.addEventListener('input',(e)=>{
     manualadress = manualadress.toUpperCase(); 
     console.log(manualadress);
     for(let i =0;i< adrres.length;i++){
-        let potentialadrress = adrres[i].textContent;
+        let potentialadrress = adrres[i].innerHTML;
         potentialadrress = potentialadrress.toUpperCase();
         if(potentialadrress.indexOf(manualadress) > -1){
-            adrres[i].parentElement.parentElement.parentElement.parentElement.style.display = 'block';
+            adrres[i].parentElement.parentElement.parentElement.style.display = 'block';
         }else{
-            adrres[i].parentElement.parentElement.parentElement.parentElement.style.display = 'none';
+            adrres[i].parentElement.parentElement.parentElement.style.display = 'none';
         }
     }
 })
