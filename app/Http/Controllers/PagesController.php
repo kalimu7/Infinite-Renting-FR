@@ -25,11 +25,11 @@ class PagesController extends Controller
         $id = auth()->user()->id;
         $property = user::with("properties.mediaproperty")->where('id','=',$id)->get();
         // foreach($property as $p){
-
-        //     echo $p['properties'];
-        //     foreach($p['properties'] as $m){
-        //         echo $m['mediaproperty'][0]['image_path'];
-        //     }
+        //     // echo $p;
+        //     // echo $p['properties'];
+        //     // foreach($p['properties'] as $m){
+        //     //     echo $m['mediaproperty'][0]['image_path'];
+        //     // }
         // }
         // die;
         return view('dashboard1')->with('Pr',$property);
@@ -57,14 +57,29 @@ class PagesController extends Controller
     public function search(Request $request){
         
         $city = $request->input('searchname');
-        if(!$city){
-            redirect('/property');
+        if(empty($city)){
+            
+            $property = properties::with("mediaproperty","user")->get();
+        }else{
+            $property = properties::with("mediaproperty","user")->where('city','=',$city)->get();
         }
-        $property = properties::with("mediaproperty","user")->where('city','=',$city)->get();
+
         // foreach($property as $p){
             //     echo $p;
             // }
             // die;
-        return view('properties.indexx')->with('Pr',$property)->with('city',$city);
+        $cities = properties::select('city')->get();
+        return view('properties.indexx')->with('Pr',$property)->with('city',$city)->with('cities',$cities);
+    }
+    public function show($id)
+    {
+        
+        // $property = properties::with('mediaproperty')->where("id","=",$id);
+        // $property = properties::with('mediaproperty')->find($id);
+        $property = properties::with("mediaproperty","user")->find($id);
+        $property['features'] = explode(',',$property['features']);
+        
+        
+        return view('properties.show')->with('pr',$property);
     }
 }

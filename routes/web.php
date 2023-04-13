@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\Userdata;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,9 +28,11 @@ Route::middleware([
 // Route::middleware('checkstatus',function (){})
 // Route::get('/dash',[PagesController::class,'dash'])->middleware('checkstatus');
 // Route::resource('/properties',PropertyController::class)->only('index','show');
-Route::get('/property', [PagesController::class, 'index']);
+Route::get('/property', [PagesController::class, 'search']);
 Route::post('/search', [PagesController::class,'search']);
+Route::get('/show/{id}',[PagesController::class,'show']);
 Route::middleware('checkstatus')->group(function () {
     Route::resource('/properties',PropertyController::class);
     Route::get('/dash', [PagesController::class, 'dash']);
+    Route::post('/iupdate', [Userdata::class, 'updateuserinfo']);
 });

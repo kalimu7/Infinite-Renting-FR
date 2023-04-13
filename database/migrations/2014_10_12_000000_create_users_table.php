@@ -18,6 +18,8 @@ return new class extends Migration
             $table->integer('status');
             //O for tenant 1 for landlord;
             $table->string('email')->unique();
+            $table->string('phonenumber')->default('');
+            $table->string('adrress')->default('');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

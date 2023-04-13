@@ -64,6 +64,7 @@
             </nav>
 
             <div class="container-fluid px-4">
+                
                 <div class="row g-3 my-2">
                     <div class="col-md-4">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
@@ -99,7 +100,7 @@
                     
                 </div>
                 <!-- listing -->
-                div
+                
                 @if (session('flash_message'))
                 <div class="alert alert-danger">
                 {{ session('flash_message') }}
@@ -183,6 +184,7 @@
                         
                     </nav>
                     <hr class="mt-0 mb-4">
+                    @foreach($Pr as $p)
                     <div class="row">
                         <div class="col-xl-4">
                             <!-- Profile picture card-->
@@ -190,11 +192,18 @@
                                 <div class="card-header">Profile Picture</div>
                                 <div class="card-body text-center">
                                     <!-- Profile picture image-->
+                                <form action="/iupdate" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    @if(!empty($p['profile_photo_path']))
+                                    <img class="img-account-profile rounded-circle mb-2" width="100px" src="/images/{{$p['profile_photo_path']}}" alt="">
+                                    @else
                                     <img class="img-account-profile rounded-circle mb-2" width="100px" src="/images/us.jpg" alt="">
+                                    @endif
                                     <!-- Profile picture help block-->
                                     <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                                     <!-- Profile picture upload button-->
-                                    <button class="btn scl text-white" type="button">Upload new image</button>
+                                    <input type="file" name='profile_picture'>
+                                    {{-- <button class="btn scl text-white" type="button">Upload new image</button> --}}
                                 </div>
                             </div>
                         </div>
@@ -203,63 +212,55 @@
                             <div class="card mb-4">
                                 <div class="card-header">Account Details</div>
                                 <div class="card-body">
-                                    <form>
+                                    
                                         <!-- Form Group (username)-->
-                                        <div class="mb-3">
-                                            <label class="small mb-1" for="inputUsername">Username (how your name will appear to other users on the site)</label>
-                                            <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="username">
-                                        </div>
+                                        
                                         <!-- Form Row-->
                                         <div class="row gx-3 mb-3">
                                             <!-- Form Group (first name)-->
                                             <div class="col-md-6">
                                                 <label class="small mb-1" for="inputFirstName">First name</label>
-                                                <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="Valerie">
+                                                <input class="form-control" name="firstname" id="inputFirstName" type="text"  value="{{$p['name']}}">
                                             </div>
                                             <!-- Form Group (last name)-->
                                             <div class="col-md-6">
                                                 <label class="small mb-1" for="inputLastName">Last name</label>
-                                                <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="Luna">
+                                                <input class="form-control" name="lastname" id="inputLastName" type="text" placeholder="Enter your last name" value="{{$p['last_name']}}">
                                             </div>
                                         </div>
                                         <!-- Form Row        -->
                                         <div class="row gx-3 mb-3">
                                             <!-- Form Group (organization name)-->
-                                            <div class="col-md-6">
-                                                <label class="small mb-1" for="inputOrgName">Organization name</label>
-                                                <input class="form-control" id="inputOrgName" type="text" placeholder="Enter your organization name" value="Start Bootstrap">
-                                            </div>
+                                            
                                             <!-- Form Group (location)-->
                                             <div class="col-md-6">
                                                 <label class="small mb-1" for="inputLocation">Location</label>
-                                                <input class="form-control" id="inputLocation" type="text" placeholder="Enter your location" value="San Francisco, CA">
+                                                <input class="form-control" name="adrress" id="inputLocation" type="text" placeholder="Enter your location" value="{{$p['adrress']}}">
                                             </div>
                                         </div>
                                         <!-- Form Group (email address)-->
                                         <div class="mb-3">
                                             <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                            <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com">
+                                            <input class="form-control" id="inputEmailAddress" name="email" type="email" placeholder="Enter your email address" value="{{$p['email']}}">
                                         </div>
                                         <!-- Form Row-->
                                         <div class="row gx-3 mb-3">
                                             <!-- Form Group (phone number)-->
                                             <div class="col-md-6">
                                                 <label class="small mb-1" for="inputPhone">Phone number</label>
-                                                <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="555-123-4567">
+                                                <input class="form-control" id="inputPhone" type="tel" name="phonenumber" placeholder="Enter your phone number" value="{{$p['phonenumber']}}">
                                             </div>
                                             <!-- Form Group (birthday)-->
-                                            <div class="col-md-6">
-                                                <label class="small mb-1" for="inputBirthday">Birthday</label>
-                                                <input class="form-control" id="inputBirthday" type="text" name="birthday" placeholder="Enter your birthday" value="06/10/1988">
-                                            </div>
+                                            
                                         </div>
                                         <!-- Save changes button-->
-                                        <button class="btn scl text-white" type="button">Save changes</button>
+                                        <button type="submit" class="btn scl text-white">Save changes</button>
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
               </div>
             <!-- ************my properties************** -->
