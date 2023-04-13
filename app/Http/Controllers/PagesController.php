@@ -25,7 +25,7 @@ class PagesController extends Controller
         $id = auth()->user()->id;
         $property = user::with("properties.mediaproperty")->where('id','=',$id)->get();
         // foreach($property as $p){
-        //     // echo $p;
+        //     echo $p;
         //     // echo $p['properties'];
         //     // foreach($p['properties'] as $m){
         //     //     echo $m['mediaproperty'][0]['image_path'];
@@ -81,5 +81,8 @@ class PagesController extends Controller
         
         
         return view('properties.show')->with('pr',$property);
+    }
+    public function approve(){
+        return view('admin.Dashboard');
     }
 }

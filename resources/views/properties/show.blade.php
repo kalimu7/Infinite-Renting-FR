@@ -86,15 +86,15 @@
           <h6 class="py-3 px-2">Owner information</h6>
         </div>
         <div class=" pt-2 d-flex align-items-start my-4">
-          <img src="/images/us.jpg" class="rounded-circle me-2" width="80px" alt="">
+          <img src="/images/{{$pr['user']['profile_photo_path']}}" class="rounded-circle me-2" width="80px" alt="">
           <div class="ms-3">
             <span class="cl d-block">{{$pr['user']['name']}}</span>
             <span>Owner of Property</span>
           </div>
         </div>
         <div class="moreinfo border-bottom px-3 py-2">
-          <p class="cl"><i class="fa-solid fa-location-dot me-3"></i>{{$pr['adrress']}}</p>
-          <p class="cl"><i class="fa-solid fa-phone me-2"></i>+212-6 87206097</p>
+          <p class="cl"><i class="fa-solid fa-location-dot me-3"></i>{{$pr['user']['	adrress']}}</p>
+          <p class="cl"><i class="fa-solid fa-phone me-2"></i>{{$pr['user']['phonenumber']}}</p>
           <p class="cl"><i class="fa-solid fa-envelope me-2"></i>{{$pr['user']['email']}}</p>
         </div>
         <div class="openchat my-2 px-3 py-3">

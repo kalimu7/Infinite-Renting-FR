@@ -131,7 +131,7 @@
                   <div class="userinfo d-flex align-items-center justify-content-between border-top ">
                     
                       <div class=" pt-2 d-flex align-items-center">
-                        <img src="/images/us.jpg" class="rounded-circle me-2" width="50px" alt="">
+                        <img src="/images/{{$p['user']['profile_photo_path']}}" class="rounded-circle me-2" width="50px" alt="">
                         <span class="cl">{{$p['user']['name']}}</span>
                       </div>
                       <span class="cl">2 months ago</span>

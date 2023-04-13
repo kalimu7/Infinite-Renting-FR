@@ -5,6 +5,8 @@ use App\Models\properties;
 use App\Models\MediaProperty;
 use App\Models\user;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class Userdata extends Controller
 {
@@ -25,9 +27,8 @@ class Userdata extends Controller
         $id = auth()->user()->id;
         $user = User::find($id);
         $validator = Validator::make($request->all(), [
-            'firstname' => 'required',
-            'lastname' => 'required',
-            'email' => 'required|email|unique:users,email,'.$id,
+            'phonenumber' => 'required',
+            'adrress' => 'required',
         ]);
     
         if ($validator->fails()) {

@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckStatus
+class admin
 {
     /**
      * Handle an incoming request.
@@ -15,13 +15,9 @@ class CheckStatus
      */
     public function handle(Request $request, Closure $next): Response
     {
-        
-        if(Auth()->check() && Auth()->user()->status == 1){
-            
+        if (Auth()->check() && Auth()->user()->status == 3) {
             return $next($request);
-        }else{
-            
-            return redirect('/');
         }
+        return redirect('/');
     }
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\Userdata;
+use App\Http\Controllers\admin;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,8 +32,11 @@ Route::middleware([
 Route::get('/property', [PagesController::class, 'search']);
 Route::post('/search', [PagesController::class,'search']);
 Route::get('/show/{id}',[PagesController::class,'show']);
-Route::middleware('checkstatus')->group(function () {
+Route::middleware(['checkstatus'])->group(function () {
     Route::resource('/properties',PropertyController::class);
     Route::get('/dash', [PagesController::class, 'dash']);
     Route::post('/iupdate', [Userdata::class, 'updateuserinfo']);
+});
+Route::middleware(['admin'])->group(function () {
+    Route::get('/admin', [PagesController::class, 'approve']);
 });

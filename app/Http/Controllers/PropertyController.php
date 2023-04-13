@@ -103,7 +103,7 @@ class PropertyController extends Controller
             $img->save();
         }
         
-    return redirect('/properties')->with('msg','new property added ');
+    return redirect('/property')->with('msg','new property added ');
 
     }
 
@@ -225,7 +225,7 @@ class PropertyController extends Controller
     }
     }
 
-    return redirect('/properties')->with('msg', 'Property updated successfully');
+    return redirect('/property')->with('msg', 'Property updated successfully');
 }
 
 
