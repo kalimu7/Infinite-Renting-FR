@@ -59,9 +59,9 @@ class PagesController extends Controller
         $city = $request->input('searchname');
         if(empty($city)){
             
-            $property = properties::with("mediaproperty","user")->get();
+            $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->get();
         }else{
-            $property = properties::with("mediaproperty","user")->where('city','=',$city)->get();
+            $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->where('city','=',$city)->get();
         }
 
         // foreach($property as $p){
@@ -76,13 +76,11 @@ class PagesController extends Controller
         
         // $property = properties::with('mediaproperty')->where("id","=",$id);
         // $property = properties::with('mediaproperty')->find($id);
-        $property = properties::with("mediaproperty","user")->find($id);
+        $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->find($id);
         $property['features'] = explode(',',$property['features']);
         
         
         return view('properties.show')->with('pr',$property);
     }
-    public function approve(){
-        return view('admin.Dashboard');
-    }
+    
 }

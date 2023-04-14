@@ -27,6 +27,7 @@ return new class extends Migration
             $table->integer('garages_number');
             $table->integer('bath_number');
             $table->string('features');
+            $table->integer('approve_status')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
