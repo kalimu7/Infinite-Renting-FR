@@ -55,4 +55,8 @@
 .notactive{
     background-color: #03254bc9;
 }
+.hv:hover{
+    background-color: #25323E !important;
+    color:white !important;
+}
 

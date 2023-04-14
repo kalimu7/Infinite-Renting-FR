@@ -34,11 +34,11 @@
               @if(auth()->user())
               <form method="POST" action="{{ route('logout') }}" x-data>
                 @csrf
-                <button type="submit" class="btn btn-primary">logout</button>
+                <button type="submit" class="btn rounded  active hv py-2 px-4">logout <i class="bi bi-box-arrow-left"></i></button>
               </form>
               @endif
             </div>
-            <a class="nav-item nav-link adP text-center text-white py-2 px-4 rounded active" href="/dash">Add Property</a>
+            <a class="nav-item nav-link adP text-center text-white py-2 px-4 rounded active" style="background-color: #25323E !important;" href="/dash">Add Property</a>
           </div>
         </div>
     </nav>

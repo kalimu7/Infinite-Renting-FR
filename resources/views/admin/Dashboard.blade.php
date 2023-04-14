@@ -126,7 +126,8 @@
                                     <th>Position</th>
                                     <th>Status</th>
                                     <th>Actions</th>
-                                    <th></th>
+                                    <th>check property</th>
+                                    
                                   </tr>
                               </thead>
                               <tbody>
@@ -171,19 +172,10 @@
                                 </td>
                                 <td>
                                   
-                                    <a href="/properties/{{$p['id']}}/edit" type="submit" class="btn badge badge-success  btn-warning rounded-pill">edit</a>
+                                    <a href="/check/{{$p['id']}}" type="submit" class="btn badge badge-success  btn-warning rounded-pill">check it</a>
                                   
                                   </td>
-                                <td>
-                                  <form method="POST" action="{{url('properties/'.$p['id'])}}" accept-charset="UTF-8" style="display:inline">
-                                      {{ method_field('DELETE') }}
-                                      {{ csrf_field() }}
-                                      <button class="btn" type="submit">
-                                          <i class="fa-solid fa-trash text-danger"></i>
-                                      </button>
-                                  </form>
-                                  
-                                </td>
+                                
                               </tr>
                               {{-- @endforeach --}}
                               

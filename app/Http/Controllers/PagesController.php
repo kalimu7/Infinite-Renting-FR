@@ -32,14 +32,19 @@ class PagesController extends Controller
         //     // }
         // }
         // die;
-        return view('dashboard1')->with('Pr',$property);
+        $active =  properties::where('approve_status','=',1)->where('user_id','=',$id)->get();
+        $number = $active->count();
+        $notactive = properties::where('approve_status','=',0)->where('user_id','=',$id)->get();
+        $numbernot = $notactive->count();
+        
+        return view('dashboard1')->with('Pr',$property)->with('activep',$number)->with('notactive',$numbernot);
     }
 
     public function index()
     {
         
-            $property = user::with("properties.mediaproperty")->get();
-            $cities = properties::select('city')->get();
+        $property = user::with("properties.mediaproperty")->get();
+        $cities = properties::select('city')->get();
 
         // $property = properties::with("mediaproperty")->get();
         
@@ -58,7 +63,6 @@ class PagesController extends Controller
         
         $city = $request->input('searchname');
         if(empty($city)){
-            
             $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->get();
         }else{
             $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->where('city','=',$city)->get();
@@ -76,7 +80,10 @@ class PagesController extends Controller
         
         // $property = properties::with('mediaproperty')->where("id","=",$id);
         // $property = properties::with('mediaproperty')->find($id);
-        $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->find($id);
+        $property = properties::with("mediaproperty","user")->find($id);
+        if($property['approve_status'] ==0){
+            return back();
+        }
         $property['features'] = explode(',',$property['features']);
         
         

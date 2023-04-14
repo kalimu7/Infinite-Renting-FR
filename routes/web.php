@@ -38,9 +38,7 @@ Route::middleware(['checkstatus'])->group(function () {
     Route::post('/iupdate', [Userdata::class, 'updateuserinfo']);
 });
 Route::middleware(['admin'])->group(function () {
-
     Route::get('/admin', [admin::class,'approve']);
     Route::post('/approve/{id}', [admin::class,'approve_status']);
-    Route::get('/check/{id}', [PagesController::class,'show']);
-    
+    Route::get('/check/{id}', [admin::class,'show']);
 });

@@ -31,5 +31,16 @@ class admin extends Controller
         $property->save();
         return back();
     }
+    public function show($id)
+    {
+        
+        // $property = properties::with('mediaproperty')->where("id","=",$id);
+        // $property = properties::with('mediaproperty')->find($id);
+        $property = properties::with("mediaproperty","user")->find($id);
+        $property['features'] = explode(',',$property['features']);
+        
+        
+        return view('properties.show')->with('pr',$property);
+    }
     
 }
