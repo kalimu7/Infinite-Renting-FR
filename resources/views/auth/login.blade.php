@@ -44,7 +44,7 @@
                     </a>
                 @endif
                 <div class="d-flex justify-content-end">
-                    <x-button class=" ml-4 border-0 text-white py-2 w-25  active">
+                    <x-button class=" ml-4 border-0 text-white py-2  active">
                         {{ __('Log in') }}
                     </x-button>
                 </div>

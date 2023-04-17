@@ -1,5 +1,6 @@
 @extends('app')
 @section('content')
+
 <div class="displaysingle row my-3 mx-0">
     
     <div class="col-lg-8 detailsofroom px-5">
@@ -93,7 +94,7 @@
           </div>
         </div>
         <div class="moreinfo border-bottom px-3 py-2">
-          <p class="cl"><i class="fa-solid fa-location-dot me-3"></i>{{$pr['user']['	adrress']}}</p>
+          <p class="cl"><i class="fa-solid fa-location-dot me-3"></i>{{$pr['user']['adrress']}}</p>
           <p class="cl"><i class="fa-solid fa-phone me-2"></i>{{$pr['user']['phonenumber']}}</p>
           <p class="cl"><i class="fa-solid fa-envelope me-2"></i>{{$pr['user']['email']}}</p>
         </div>

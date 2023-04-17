@@ -89,6 +89,8 @@
     #wrapper.toggled #sidebar-wrapper {
       margin-left: -15rem;
     }
+
+
   }
 
   /* ***prf*** */
@@ -207,8 +209,10 @@ h6,
 @media screen and (max-width: 991px) {
   .property-form-group p.no-mb,
   .property-form-group p.no-mb input {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
+  
+}
+  
 
   .property-form-group p.no-mb.first input {
     margin-bottom: 20px !important;
@@ -415,3 +419,4 @@ ul.pro-feature-add,
 .AP, .PE, .MP{
   display: none;
 }
+

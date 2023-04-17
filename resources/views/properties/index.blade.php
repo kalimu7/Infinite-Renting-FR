@@ -4,12 +4,12 @@
 <body style="background-color: #f5f7fb;">
     <!-- style="background-color: #f5f7fb;" -->
     
-      <div class="bigresult row mt-5 mx-2 my-4">
-          <div class="col-lg-3 col-md-10 px-3 bg-white rounded mx-2 " style="height: max-content; ">
+      <div class="bigresult row mt-5 mx-2 my-4 ">
+          <div class="col-lg-3 col-md-10 px-3 bg-white rounded mx-2 text-center" style="height: max-content; ">
             <div class="border-bottom  p-2 mb-4">
               <h4>Find Your house</h4>
             </div>
-            <div class="search form">
+            <div class="search form ">
               <form action="" class="p-3">
                 <div class="input-group mb-3">
                   <input type="text" class="form-control" placeholder="Enter an adrress" aria-label="Username" aria-describedby="basic-addon1">

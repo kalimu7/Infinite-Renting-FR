@@ -8,7 +8,7 @@
     
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <div class="firstSection">
+    <div class="firstSection text-center">
         <h1 class="text-white display-1">Discover Your New Home</h1>
         <p class="display-5 text-white">Helping  renters find their perfect fit.</p>
        
@@ -24,37 +24,46 @@
     <div class="secondsection p-5">
       <h3 class="text-center my-5">Explore Rentals in Dalian</h3>
 
-      <div class="cards d-flex justify-content-between">
+      <div class="row">
 
-        <div class="card col-4 col-xs-6" style="width: 18rem;">
-          <img class="card-img-top" src="/images/1card.jpg" alt="Card image cap">
-          <div class="card-body text-center">
-            <h5 class="card-title">Elevate</h5>
-            <p class="card-text">930 W Altgeld St, <br>Chicago, IL 60614 <br>Studio - 3 Beds | $2,210 - $14,555 </p>
+        <div class="col-lg-3  col-xs-10 col-sm-6 my-1">
+          
+          <div class="card " >
+            <img class="card-img-top" src="/images/1card.jpg" alt="Card image cap"  >
+            <div class="card-body text-center">
+              <h5 class="card-title">Elevate</h5>
+              <p class="card-text">930 W Altgeld St, <br>Chicago, IL 60614 <br>Studio - 3 Beds | $2,210 - $14,555 </p>
+            </div>
           </div>
         </div>
 
-        <div class="card col-4 col-xs-6" style="width: 18rem;">
-          <img class="card-img-top" src="/images/5card.jpg" alt="Card image cap">
-          <div class="card-body text-center">
-            <h5 class="card-title">Elevate</h5>
-            <p class="card-text">930 W Altgeld St, <br>Chicago, IL 60614 <br>Studio - 3 Beds | $2,210 - $14,555 </p>
+        <div class="col-lg-3  col-xs-10 col-sm-6  my-1">
+          <div class="card " >
+            <img class="card-img-top" src="/images/5card.jpg" alt="Card image cap"  >
+            <div class="card-body text-center">
+              <h5 class="card-title">Elevate</h5>
+              <p class="card-text">930 W Altgeld St, <br>Chicago, IL 60614 <br>Studio - 3 Beds | $2,210 - $14,555 </p>
+            </div>
           </div>
         </div>
 
-        <div class="card col-4 col-xs-6" style="width: 18rem;">
-          <img class="card-img-top" src="/images/pexels-alexander-zvir-3705529.jpg" alt="Card image cap">
-          <div class="card-body text-center">
-            <h5 class="card-title">Elevate</h5>
-            <p class="card-text">930 W Altgeld St, <br>Chicago, IL 60614 <br>Studio - 3 Beds | $2,210 - $14,555 </p>
+        <div class="col-lg-3  col-xs-10 col-sm-6 my-1">
+          <div class="card " >
+            <img class="card-img-top" src="/images/pexels-alexander-zvir-3705529.jpg" alt="Card image cap" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Elevate</h5>
+              <p class="card-text">930 W Altgeld St, <br>Chicago, IL 60614 <br>Studio - 3 Beds | $2,210 - $14,555 </p>
+            </div>
           </div>
         </div>
 
-        <div class="card col-4 col-xs-6" style="width: 18rem;">
-          <img class="card-img-top" src="/images/1card.jpg" alt="Card image cap">
-          <div class="card-body text-center">
-            <h5 class="card-title">Elevate</h5>
-            <p class="card-text">930 W Altgeld St, <br>Chicago, IL 60614 <br>Studio - 3 Beds | $2,210 - $14,555 </p>
+        <div class="col-lg-3  col-xs-10 col-sm-6 my-1">
+          <div class="card " >
+            <img class="card-img-top" src="/images/1card.jpg" alt="Card image cap" >
+            <div class="card-body text-center">
+              <h5 class="card-title">Elevate</h5>
+              <p class="card-text">930 W Altgeld St, <br>Chicago, IL 60614 <br>Studio - 3 Beds | $2,210 - $14,555 </p>
+            </div>
           </div>
         </div>
       </div>
@@ -65,7 +74,7 @@
       <p class="my-2">Choose from over 1 million apartments, houses, condos, and townhomes for rent</p>
     </div>
     <div class="thirdsection container">
-        <div class="d-flex">
+        <div class="d-flex game">
           <div  class="w-50 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
             <h2>Renting Made Simple</h2>
             <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>

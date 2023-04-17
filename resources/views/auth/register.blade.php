@@ -70,7 +70,7 @@
                     {{ __('Already registered?') }}
                 </a>
                 <div class="d-flex justify-content-end">
-                    <x-button class="ml-4 border-0 text-white py-2 w-25  active">
+                    <x-button class="ml-4 border-0 text-white py-2  active">
                         {{ __('Register') }}
                     </x-button>
                 </div>
