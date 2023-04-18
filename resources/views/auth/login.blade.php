@@ -1,3 +1,6 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 @extends('app')
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -11,7 +14,7 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-8 col-xl-6">
                 <div class="card rounded-3">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+                    <img src="./images/Real-estate1.png"
                     class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
                     alt="Sample photo">
                     <x-validation-errors class="mb-4" />
@@ -57,4 +60,4 @@
     </div>
 </section>
 @endsection
-    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>

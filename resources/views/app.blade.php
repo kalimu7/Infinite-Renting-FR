@@ -68,28 +68,30 @@
     @yield('content')
     <footer class=" d-flex align-items-start flex-column flex-lg-row  px-5 py-3 " style="background-color: #25323E;">
         <div class="col-3  ">
-          <img src="./images/infinte_Renting.png" alt="" srcset="" width="70px" style="border-radius: 50%;" >
-          <a class="navbar-brand" href="#" style="color: #93979A;" >Infinite Renting</a>
+          <div>
+            <img src="./images/infinte_Renting.png" alt="" srcset="" width="70px" style="border-radius: 50%;" >
+            <a class="navbar-brand" href="#" style="color: #93979A;" >Infinite Renting</a>
+          </div>
           <div class="mt-3 d-flex justify-content-between" style="width:100px;" >
             <i class="bi bi-facebook ms-1 me-4" style="color: #93979A;"></i>
             <i class="bi bi-instagram mx-5" style="color: #93979A;"></i>
             <i class="bi bi-youtube ms-3" style="color: #93979A;"></i>
           </div>
         </div>
-        <div class="Advertisers   col-3">  
+        <div class="Advertisers   col-lg-3 col-xs-10 mt-2">  
           <p class="" style="color: #93979A;">Advertisers</p>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;" >Advertise</a>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Add a Property</a>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Digital Feeds Program</a>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Customer Portal</a>
         </div>
-        <div class="Marketplace  col-3"> 
+        <div class="Marketplace  col-lg-3 col-xs-10 mt-2"> 
           <p class="" style="color: #93979A;">Explore</p>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;" >InfinitRenting.com</a>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">ForRent</a>
         </div>
         
-        <div class="About Us  col-3"> 
+        <div class="About Us  col-lg-3 col-xs-10 mt-2"> 
           <p class="" style="color: #93979A;">About Us</p>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;" >Contact Us</a>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Sign up</a>
@@ -98,8 +100,8 @@
     </footer>
         {{-- <script src="/JS/animation.js"></script> --}}
         {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> --}}
-        {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   --}}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-Ynpu4MZ4PhSB5ih5jt5B9XGfbvC8S5YrvwHn60xUxg6Ukdh6Uf1nGZlQ9ff06+Wh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+        {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-Ynpu4MZ4PhSB5ih5jt5B9XGfbvC8S5YrvwHn60xUxg6Ukdh6Uf1nGZlQ9ff06+Wh" crossorigin="anonymous"></script> --}}
 
       </body>
   </html>

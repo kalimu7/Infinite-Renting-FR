@@ -73,36 +73,37 @@
       <h3 class="my-3">The Most Rental Listings</h3>
       <p class="my-2">Choose from over 1 million apartments, houses, condos, and townhomes for rent</p>
     </div>
-    <div class="thirdsection container">
-        <div class="d-flex game">
-          <div  class="w-50 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
+    
+    <div class="thirdsection container ">
+        <div class="row ">
+          <div  class="col-lg-6 col-12 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
             <h2>Renting Made Simple</h2>
             <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>
             <a href="">Find Out More</a>
           </div>
-          <div class="w-50" >
+          <div class="col-lg-6 col-12 "style="padding:0;" >
             <img src="/images/pic1.jpg" width="100%" alt="" srcset="">
           </div>
         </div>
         
-        <div class="d-flex ">
-          <div class="w-50">
+        <div class="row">
+          <div class="col-lg-6 col-12 order-lg-1 order-2" style="padding:0;">
             <img src="/images/pexels-cottonbro-studio-4569340 1.png" width="100%" alt=""  srcset="">
           </div>
-          <div  class="w-50 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
+          <div  class="col-lg-6 col-12 d-flex flex-column justify-content-between p-5 order-lg-2 order-1" style="background-color:#F5F5F5;">
             <h2>Renting Made Simple</h2>
             <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>
             <a href="">Find Out More</a>
           </div>
         </div>
 
-        <div class="d-flex">
-          <div  class="w-50 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
+        <div class="row">
+          <div  class="col-lg-6 col-12 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
             <h2>Renting Made Simple</h2>
             <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>
             <a href="">Find Out More</a>
           </div>
-          <div class="w-50">
+          <div class="col-lg-6 col-12" style="padding:0;">
             <img src="/images/pic3.png" width="100%" alt="" srcset="">
           </div>
         </div>
@@ -112,22 +113,22 @@
       <h3 class="display-6" >Work with the best suite of property management tools on the market</h3>
     </div>
     <div class="forthcontainer container">
-      <div class="d-flex">
-        <div  class="w-50 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
+      <div class="row ">
+        <div  class="col-lg-6 col-12  order-lg-1 order-2 p-5" style="background-color:#F5F5F5;">
           <h2>Renting Made Simple</h2>
           <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>
           <a href="">Find Out More</a>
         </div>
-        <div class="w-50" >
-          <img src="/images/pexels-photo-2549031.png" width="100%" alt="" srcset="">
+        <div class="col-lg-6 col-12 order-lg-2 order-1"style="padding:0;" >
+          <img src="/images/pexels-photo-2549031.png"  width="100%" alt="" srcset="">
         </div>
       </div>
       
-      <div class="d-flex ">
-        <div class="w-50">
+      <div class="row  ">
+        <div class="col-lg-6 col-12 " style="padding:0;">
           <img src="/images/pexels-peter-olexa-4012966_1.png" width="100%" alt=""  srcset="">
         </div>
-        <div  class="w-50 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
+        <div  class="col-lg-6 col-12 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
           <h2>Renting Made Simple</h2>
           <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>
           <a href="">Find Out More</a>
