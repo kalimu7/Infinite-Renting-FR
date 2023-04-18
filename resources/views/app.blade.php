@@ -18,7 +18,7 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="/home">
-        <img src="../images/infinterentingblack.png" alt="" srcset="" width="70px" >
+        <img src="/images/infinterentingblack.png" alt="" srcset="" width="70px" >
         Infinite Renting
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,6 +59,7 @@
             <button type="submit" class="btn rounded  active hv py-2 px-4">logout <i class="bi bi-box-arrow-left"></i></button>
           </form>
           @endif
+          {{-- <a class="nav-item nav-link adP text-center text-white  py-2 px-4 rounded active" style="background-color: #25323E !important;" href="/dash">Explore</a> --}}
           <a class="nav-item nav-link adP text-center text-white  py-2 px-4 rounded active" style="background-color: #25323E !important;" href="/dash">Add Property</a>
         </div>
       </div>
@@ -69,7 +70,7 @@
     <footer class=" d-flex align-items-start flex-column flex-lg-row  px-5 py-3 " style="background-color: #25323E;">
         <div class="col-3  ">
           <div>
-            <img src="./images/infinte_Renting.png" alt="" srcset="" width="70px" style="border-radius: 50%;" >
+            <img src="/images/infinte_Renting.png" alt="" srcset="" width="70px" style="border-radius: 50%;" >
             <a class="navbar-brand" href="#" style="color: #93979A;" >Infinite Renting</a>
           </div>
           <div class="mt-3 d-flex justify-content-between" style="width:100px;" >

@@ -69,13 +69,13 @@
       </div>
     </div>
     <div class="text-center">
-      <a href="/properties" style="background-color: #25323E;" class="btn text-white mx-1 " >View More</a>
+      <a href="/property" style="background-color: #25323E;" class="btn text-white mx-1 " >Explore More</a>
       <h3 class="my-3">The Most Rental Listings</h3>
       <p class="my-2">Choose from over 1 million apartments, houses, condos, and townhomes for rent</p>
     </div>
     
-    <div class="thirdsection container ">
-        <div class="row ">
+    <div class="thirdsection container">
+        <div class="row mx-1">
           <div  class="col-lg-6 col-12 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
             <h2>Renting Made Simple</h2>
             <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>
@@ -86,7 +86,7 @@
           </div>
         </div>
         
-        <div class="row">
+        <div class="row mx-1">
           <div class="col-lg-6 col-12 order-lg-1 order-2" style="padding:0;">
             <img src="/images/pexels-cottonbro-studio-4569340 1.png" width="100%" alt=""  srcset="">
           </div>
@@ -97,7 +97,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row mx-1">
           <div  class="col-lg-6 col-12 d-flex flex-column justify-content-between p-5" style="background-color:#F5F5F5;">
             <h2>Renting Made Simple</h2>
             <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>
@@ -113,7 +113,7 @@
       <h3 class="display-6" >Work with the best suite of property management tools on the market</h3>
     </div>
     <div class="forthcontainer container">
-      <div class="row ">
+      <div class="row mx-1">
         <div  class="col-lg-6 col-12  order-lg-1 order-2 p-5" style="background-color:#F5F5F5;">
           <h2>Renting Made Simple</h2>
           <p>Browse the highest quality listings, apply online, sign your lease, and even pay your rent from any device.</p>
@@ -124,7 +124,7 @@
         </div>
       </div>
       
-      <div class="row  ">
+      <div class="row  mx-1">
         <div class="col-lg-6 col-12 " style="padding:0;">
           <img src="/images/pexels-peter-olexa-4012966_1.png" width="100%" alt=""  srcset="">
         </div>

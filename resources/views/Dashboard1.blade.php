@@ -179,11 +179,7 @@
 
                 <div class="container-xl px-4 mt-4">
                     <!-- Account page navigation-->
-                    <nav class="nav nav-borders">
-                        <a class="nav-link active ms-0" href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details" target="__blank">Profile</a>
-                        
-                    </nav>
-                    <hr class="mt-0 mb-4">
+                    
                     @foreach($Pr as $p)
                     <div class="row">
                         <div class="col-xl-4">

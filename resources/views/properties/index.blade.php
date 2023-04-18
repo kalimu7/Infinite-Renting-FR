@@ -1,9 +1,9 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @extends('app')
 @section('content')
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <body style="background-color: #f5f7fb;">
     <!-- style="background-color: #f5f7fb;" -->
     
@@ -41,7 +41,7 @@
                   <option selected disabled hidden >
                     <span class="select-icon"><i class="fa-solid fa-location-dot"></i>Bedrooms</span>
                   </option>
-                  <option value="1"> One</option>
+                  <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>

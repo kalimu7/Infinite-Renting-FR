@@ -45,15 +45,15 @@
           </div>
         </div>
       </div>
-      <div class="bg-white my-2 p-3 rounded">
+      <div class="bg-white my-2  rounded">
         <h6 class="">Description</h6>
         <hr style="width: 100px;border: 2px solid #0e2487;">
         <p>{{$pr['description']}}</p>
       </div>
-      <div class="my-2 rounded bg-white p-3 ">
+      <div class="my-2 rounded bg-white  ">
         <h6 class="">Property Details</h6>
         <hr style="width: 100px;border: 2px solid #0e2487;">
-        <ul class="list">
+       <ul class="list">
           <li class="list-item cl "><b> Property ID:</b> V254680</li>
           <li class="list-item cl"><b>Property Type:</b> {{$pr['type']}}</li>
           <li class="list-item cl"><b> Property Price:</b> ¥{{$pr['price']}}</li>
@@ -78,7 +78,7 @@
       <video controls src="/video/{{$pr['mediaproperty'][0]['video_path']}}" type="video/mp4" height="100%" width="100%" ></video>
     </div>
     @endif
-    <div class="bg-white my-2 p-3 rounded">
+    <div class="bg-white my-2 rounded">
       <h6 class="">Location</h6>
       <hr style="width: 100px;border: 2px solid #0e2487;">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d724.9959173741022!2d-9.24249268231212!3d32.29673447554169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac212e53e8f12b%3A0x54d19e6c57b5aaf3!2s7QW4%2BMR8%2C%20Safi!5e0!3m2!1sen!2sma!4v1680398937037!5m2!1sen!2sma" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -1,3 +1,6 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 @extends('app')
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -5,7 +8,7 @@
     <!-- style="background-color: #f5f7fb;" -->
     
       <div class="bigresult row mt-5 mx-2 my-4">
-          <div class="col-lg-3 col-md-10 px-3 bg-white rounded mx-2 " style="height: max-content; ">
+          <div class="col-lg-3 col-md-10  bg-white rounded px-2 " style="height: max-content; ">
             <div class="border-bottom  p-2 mb-4">
               <h4>Find Your house</h4>
             </div>
@@ -67,7 +70,7 @@
               </form>
             </div>
           </div>
-          <div class="col-lg-9 col-md-12 row gap-5 ">
+          <div class="col-lg-9 col-md-12 row gap-5 mx-auto mt-2">
            @if (session('msg'))
             <div class="alert alert-success">
                 {{ session('msg') }}
@@ -149,3 +152,4 @@
 
   </body>
 @endsection
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
