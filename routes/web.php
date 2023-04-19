@@ -32,12 +32,12 @@ Route::middleware([
 Route::get('/property', [PagesController::class, 'search']);
 Route::post('/search', [PagesController::class,'search']);
 Route::get('/show/{id}',[PagesController::class,'show']);
+Route::get('/contactus', [PagesController::class,'contact']);
+Route::get('/aboutus', [PagesController::class,'about']);
 Route::middleware(['checkstatus'])->group(function () {
     Route::resource('/properties',PropertyController::class);
     Route::get('/dash', [PagesController::class, 'dash']);
     Route::post('/iupdate', [Userdata::class, 'updateuserinfo']);
-    Route::get('/contactus', [PagesController::class,'contact']);
-    Route::get('/aboutus', [PagesController::class,'about']);
 });
 Route::middleware(['admin'])->group(function () {
     Route::get('/admin', [admin::class,'approve']);

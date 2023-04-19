@@ -15,7 +15,7 @@
             <div class="col-lg-8 col-xl-6">
                 <div class="card rounded-3">
                     <img src="./images/Real-estate1.png"
-                    class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                    class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;height:300px;"
                     alt="Sample photo">
                     <x-validation-errors class="mb-4" />
                     <div class="card-body p-4 p-md-5">
