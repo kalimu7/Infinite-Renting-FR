@@ -89,5 +89,11 @@ class PagesController extends Controller
         
         return view('properties.show')->with('pr',$property);
     }
+    public function contact(){
+        return view('contactus');
+    }
+    public function about(){
+        return view('aboutus');
+    }
     
 }

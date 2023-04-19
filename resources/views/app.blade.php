@@ -82,7 +82,7 @@
         <div class="Advertisers   col-lg-3 col-xs-10 mt-2">  
           <p class="" style="color: #93979A;">Advertisers</p>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;" >Advertise</a>
-          <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Add a Property</a>
+          <a href="/dash" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Add a Property</a>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Digital Feeds Program</a>
           <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Customer Portal</a>
         </div>
@@ -94,8 +94,9 @@
         
         <div class="About Us  col-lg-3 col-xs-10 mt-2"> 
           <p class="" style="color: #93979A;">About Us</p>
-          <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;" >Contact Us</a>
-          <a href="" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Sign up</a>
+          <a href="/aboutus" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;" >About Us</a>
+          <a href="/contactus" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;" >Contact Us</a>
+          <a href="/register" class="d-block text-white" style="text-decoration: none;color: #7F7E7E;">Sign up</a>
         </div>
         
     </footer>
