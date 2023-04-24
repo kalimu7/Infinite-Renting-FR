@@ -54,6 +54,9 @@
           <span>/</span>
           <a class="nav-item nav-link" href="/login">Sign In</a>
           @endif
+          @if(auth()->user() && auth()->user()->status == 3)
+          <a class="nav-item nav-link adP text-center text-white  py-2 px-4 rounded active" style="background-color: #3a4e60 !important;" href="/admin">admin</a>
+          @endif
           @if(auth()->user())
           <form method="POST" action="{{ route('logout') }}" x-data>
             @csrf
