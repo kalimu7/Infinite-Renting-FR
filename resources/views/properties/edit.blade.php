@@ -148,9 +148,10 @@
 
                                 <label for="area">type</label>
                                 <select name="type" id="type">
-                                    <option value="1">House</option>
-                                    <option value="2">Apartement</option>
-                                    <option value="3">Garage</option>
+                                    
+                                    <option  @selected($pr->type == '1') value="1">House</option>
+                                    <option  @selected($pr->type == '2') value="2">Apartement</option>
+                                    <option  @selected($pr->type == '3') value="3">Garage</option>
                                 </select>
 
                             </div>
@@ -159,9 +160,9 @@
 
                                 <label for="area">Rooms</label>
                                 <select name="rooms" id="type">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
+                                    <option @selected($pr->rooms_number	 == '1') value="1">1</option>
+                                    <option @selected($pr->rooms_number	 == '2') value="2">2</option>
+                                    <option @selected($pr->rooms_number	 == '3') value="3">3</option>
                                 </select>
 
                             </div>
@@ -172,9 +173,9 @@
 
                                 <label for="bathrooms">BathRooms</label>
                                 <select name="bathrooms" id="type">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
+                                    <option @selected($pr->bath_number == '1') value="1">1</option>
+                                    <option @selected($pr->bath_number == '2') value="2">2</option>
+                                    <option @selected($pr->bath_number == '3') value="3">3</option>
                                 </select>
 
                             </div>
@@ -185,9 +186,9 @@
 
                             <label for="Garages">Garages</label>
                             <select name="garages" id="type">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                                <option @selected($pr->garages_number == '1') value="1">1</option>
+                                <option @selected($pr->garages_number == '2') value="2">2</option>
+                                <option @selected($pr->garages_number == '3') value="3">3</option>
                             </select>
 
                         </div>
@@ -198,9 +199,9 @@
 
                             <label for="area">BedRooms</label>
                             <select name="bedrooms" id="type">
-                                <option value="2">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
+                                <option @selected($pr->beedrooms_number == '1') value="1">1</option>
+                                <option @selected($pr->beedrooms_number == '2') value="2">2</option>
+                                <option @selected($pr->beedrooms_number == '3') value="3">3</option>
                             </select>
 
                         </div>

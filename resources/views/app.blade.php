@@ -48,6 +48,7 @@
           </li>
         </ul> --}}
         <div class="d-flex align-items-center gap-3 justify-content-center flex-column-reverse flex-lg-row ">
+          
           @if(!auth()->user())
           <a class="nav-item nav-link " href="/register">Sign Up</a>
           <span>/</span>

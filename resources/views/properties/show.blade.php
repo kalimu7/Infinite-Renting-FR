@@ -72,13 +72,13 @@
     </ul>
     </div>
     @if($pr['mediaproperty'][0]['video_path'])
-    <div class="bg-white my-2 p-3 rounded">
+    <div class="bg-white my-2 p-3 rounded"style="height:90vh !important;">
       <h6 class="">Property Video</h6>
       <hr style="width: 100px;border: 2px solid #0e2487;">
-      <video controls src="/video/{{$pr['mediaproperty'][0]['video_path']}}" type="video/mp4" height="100%" width="100%" ></video>
+      <video controls src="/video/{{$pr['mediaproperty'][0]['video_path']}}" type="video/mp4"  width="100%" ></video>
     </div>
     @endif
-    <div class="bg-white my-2 rounded">
+    <div class="bg-white my-5 rounded">
       <h6 class="">Location</h6>
       <hr style="width: 100px;border: 2px solid #0e2487;">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d724.9959173741022!2d-9.24249268231212!3d32.29673447554169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdac212e53e8f12b%3A0x54d19e6c57b5aaf3!2s7QW4%2BMR8%2C%20Safi!5e0!3m2!1sen!2sma!4v1680398937037!5m2!1sen!2sma" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

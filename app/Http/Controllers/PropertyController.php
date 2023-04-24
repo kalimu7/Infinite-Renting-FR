@@ -130,6 +130,7 @@ class PropertyController extends Controller
         $property = properties::with("mediaproperty","user")->find($id);
         // echo $property;
         // die;
+       
         return view('properties.edit')->with('pr',$property);
     }
 

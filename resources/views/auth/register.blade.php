@@ -7,9 +7,9 @@
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
        
-        <x-validation-errors class="mb-4" />
-        <section class="" style="background-color: #f5f9fb;height:fit-content;">
-            <div class="container py-5 h-100">
+    <section class="" style="background-color: #f5f9fb;height:fit-content;">
+    <x-validation-errors class="mb-4" />
+        <div class="container py-5 h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-lg-8 col-xl-6">
                   <div class="card rounded-3">
