@@ -137,7 +137,17 @@
                                   </div>
                                 </td>
                                 <td>
-                                  <p class="fw-normal mb-1">2023/07/12</p>
+                                  @if($m['Renting_status'] == 0)
+                                    <form action="notrented/{{$m['id']}}" method="post">
+                                        @csrf
+                                        <button class="badge badge-success bg-secondary rounded-pill text-white" type="submit">Not Rented</button>
+                                    </form>
+                                    @else
+                                    <form action="rented/{{$m['id']}}" method="post">
+                                        @csrf
+                                        <button class="badge badge-success bg-success rounded-pill text-white">Rented</button>
+                                    </form>
+                                    @endif
                                 </td>
                                 <td>
                                     @if($m['approve_status'] == 0)

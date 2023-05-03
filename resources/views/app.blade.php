@@ -64,7 +64,12 @@
           </form>
           @endif
           {{-- <a class="nav-item nav-link adP text-center text-white  py-2 px-4 rounded active" style="background-color: #25323E !important;" href="/dash">Explore</a> --}}
+          @if(auth()->user() && auth()->user()->status == 1)
           <a class="nav-item nav-link adP text-center text-white  py-2 px-4 rounded active" style="background-color: #25323E !important;" href="/dash">Add Property</a>
+          @endif
+          @if(auth()->user() && auth()->user()->status == 0)
+          <a class="nav-item nav-link adP text-center text-white  py-2 px-4 rounded active" style="background-color: #25323E !important;" href="/property">Properties</a>
+          @endif
         </div>
       </div>
     </div>

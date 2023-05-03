@@ -26,6 +26,7 @@ return new class extends Migration
             $table->integer('beedrooms_number');
             $table->integer('garages_number');
             $table->integer('bath_number');
+            $table->integer('Renting_status')->default(0);
             $table->string('features');
             $table->integer('approve_status')->default(0);
             $table->unsignedBigInteger('user_id');

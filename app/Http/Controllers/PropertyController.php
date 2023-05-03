@@ -235,9 +235,9 @@ class PropertyController extends Controller
      */
     public function destroy( $id)
     {
-
         properties::destroy($id);
         return redirect('dash')->with('flash_message','deleted successfully');
-        
     }
+
+    
 }

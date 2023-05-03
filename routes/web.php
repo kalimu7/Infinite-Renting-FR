@@ -37,6 +37,8 @@ Route::get('/aboutus', [PagesController::class,'about']);
 Route::middleware(['checkstatus'])->group(function () {
     Route::resource('/properties',PropertyController::class);
     Route::get('/dash', [PagesController::class, 'dash']);
+    Route::post('/notrented/{id}', [PagesController::class, 'notrented']);
+    Route::post('/rented/{id}', [PagesController::class, 'rented']);
     Route::post('/iupdate', [Userdata::class, 'updateuserinfo']);
 });
 Route::middleware(['admin'])->group(function () {

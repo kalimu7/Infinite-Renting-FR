@@ -63,9 +63,9 @@ class PagesController extends Controller
         
         $city = $request->input('searchname');
         if(empty($city)){
-            $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->get();
+            $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->where('Renting_status','=',0)->get();
         }else{
-            $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->where('city','=',$city)->get();
+            $property = properties::with("mediaproperty","user")->where('approve_status','=',1)->where('city','=',$city)->where('Renting_status','=',0)->get();
         }
 
         // foreach($property as $p){
@@ -95,5 +95,18 @@ class PagesController extends Controller
     public function about(){
         return view('aboutus');
     }
-    
+    // *****rented or not yet*********
+    public function notrented($id){
+        
+        $property = properties::find($id);
+        $property->Renting_status = 1;
+        $property->save();
+        return back();
+    }
+    public function rented($id){
+        $property = properties::find($id);
+        $property->Renting_status = 0;
+        $property->save();
+        return back();
+    }
 }

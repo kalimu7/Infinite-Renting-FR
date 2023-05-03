@@ -18,12 +18,7 @@
                                     
             <div class="list-group list-group-flush my-3">
                 
-                <button href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold PEB"><i class="fa-solid fa-user me-2"></i>Profile</button>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold MPB"><i class="fa-solid fa-house me-2"></i>My properties</a>
-                <a href="/properties/create" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i class="fa-solid fa-plus me-2"></i>Add Property</a>
-                <a href="/chatify" class="list-group-item list-group-item-action bg-transparent second-text fw-bold "><i
-                        class="fas fa-comment-dots me-2"></i>Chat</a>
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
                 <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
                         class="fas fa-power-off me-2"></i>Logout</a>
@@ -56,7 +51,7 @@
                     <div class="col-md-4">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">720</h3>
+                                <h3 class="fs-2"></h3>
                                 <p class="fs-5">Published Property</p>
                             </div>
                             <i class="fa-solid fa-house primary-text border rounded-full secondary-bg p-3"></i>
@@ -66,7 +61,7 @@
                     <div class="col-md-4">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">4920</h3>
+                                <h3 class="fs-2"></h3>
                                 <p class="fs-5">Pending Properties</p>
                             </div>
                            
@@ -77,7 +72,7 @@
                     <div class="col-md-4">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">3899</h3>
+                                <h3 class="fs-2"></h3>
                                 <p class="fs-5">Visitors Online</p>
                             </div>
                             <i class="fa-solid fa-heart primary-text border rounded-full secondary-bg p-3"></i>
