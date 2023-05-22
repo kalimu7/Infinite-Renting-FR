@@ -366,7 +366,7 @@
             var options = selectcity.options;
             while (options.length > 0) {
                 selectcity.remove(0);
-                }
+            }
             
             console.log(selectcountry.value);
              fetch('https://countriesnow.space/api/v0.1/countries/cities', {

@@ -1,5 +1,7 @@
 {{-- user info and avatar --}}
-<div class="avatar av-l chatify-d-flex"></div>
+<div>
+    <img src="/images/{{ Auth::user()->profile_photo_path }}" class="rounded-circle me-2" width="90px" alt="" srcset="">
+</div>
 <p class="info-name">{{ config('chatify.name') }}</p>
 <div class="messenger-infoView-btns">
     <a href="#" class="danger delete-conversation">Delete Conversation</a>

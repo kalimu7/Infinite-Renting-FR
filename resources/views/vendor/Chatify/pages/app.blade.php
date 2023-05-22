@@ -1,3 +1,5 @@
+@extends('app')
+@section('content')
 @include('Chatify::layouts.headLinks')
 <div class="messenger">
     {{-- ----------------------Users/Groups lists side---------------------- --}}
@@ -56,8 +58,9 @@
                 {{-- header back button, avatar and user name --}}
                 <div class="chatify-d-flex chatify-justify-content-between chatify-align-items-center">
                     <a href="#" class="show-listView"><i class="fas fa-arrow-left"></i></a>
-                    <div class="avatar av-s header-avatar" style="margin: 0px 10px; margin-top: -5px; margin-bottom: -5px;">
-                    </div>
+                    {{-- <div class="avatar av-s header-avatar" style="margin: 0px 10px; margin-top: -5px; margin-bottom: -5px;">
+                    </div> --}}
+                    <img src="/images/{{ Auth::user()->profile_photo_path }}" class="rounded-circle me-2" width="50px" alt="" srcset="">
                     <a href="#" class="user-name">{{ config('chatify.name') }}</a>
                 </div>
                 {{-- header buttons --}}
@@ -110,3 +113,4 @@
 
 @include('Chatify::layouts.modals')
 @include('Chatify::layouts.footerLinks')
+@endsection
